@@ -1,11 +1,13 @@
 <script>
-	import reviews from '$lib/reviews.json'
+	import { fade, fly } from 'svelte/transition'
+import Review from './Review.svelte'
+	export let reviews = []
 
 	let currentReview = 0
 
 	function previousReview() {
 		if (currentReview <= 0) {
-			currentReview = reviews.length-1
+			currentReview = reviews.length
 		}
 		currentReview--
 	}
@@ -21,14 +23,11 @@
 <div class="reviews-wrap">
 	<button class="review-button" on:click={previousReview}>PREV</button>
 	<div class="reviews">
-		<div class="review">
-			<p>{reviews[currentReview].review}</p>
-			<h4>{reviews[currentReview].reviewer}</h4>
-		</div>
+		<Review review={reviews[currentReview].review} reviewer={reviews[currentReview].reviewer}/>
 	</div>
 	<button class="review-button" on:click={nextReview}>NEXT</button>
 	<div class="dots">
-		{#each reviews as review, i}
+		{#each reviews as r, i}
 		<div class="dot" class:selected-dot="{i === currentReview}"/>
 		{/each}
 	</div>
