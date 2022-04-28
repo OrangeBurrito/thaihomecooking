@@ -15,3 +15,9 @@
 	<Feature icon={`/images/icons/${feature.icon}`} text={feature.text}/>
 	{/each}
 </div>
+
+<style>
+	.features {
+		padding: 1.5rem;
+	}
+</style>
