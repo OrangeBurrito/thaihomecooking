@@ -11,6 +11,7 @@
 </script>
 
 <div class="features">
+	<h2>Why Thai Home Cooking?</h2>
 	{#each featureData as feature}
 	<Feature icon={`/images/icons/${feature.icon}`} text={feature.text}/>
 	{/each}
@@ -18,6 +19,9 @@
 
 <style>
 	.features {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		padding: 1.5rem;
 	}
 </style>

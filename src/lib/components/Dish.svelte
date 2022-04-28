@@ -24,6 +24,10 @@
 		padding-bottom: 1rem;
 	}
 
+	.dish p {
+		color: var(--on-background-light);
+	}
+
 	.dish img {
 		width: 60px;
 		height: 40px;

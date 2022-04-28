@@ -72,6 +72,10 @@
 		padding: 1.5rem;
 	}
 
+	.about p {
+		color: var(--on-surface-light);
+	}
+
 	.about-image {
 		background-image: url('/images/angsana.jpg');
 		background-position: center;

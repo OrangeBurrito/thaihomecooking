@@ -18,7 +18,7 @@ html {
 	--on-background-light: #573F31;
 	--surface: #F1E9D9;
 	--on-surface: var(var(--on-background));
-	--on-surface-light: var(var(--on-background-light));
+	--on-surface-light: var(--on-background-light);
 	--on-background-image: #FFFFFF;
 }
 
@@ -54,3 +54,7 @@ button:hover {
 }
 
 button:hover a { color: var(--on-primary-variant); }
+
+svg {
+	fill: var(--primary-variant);
+}
