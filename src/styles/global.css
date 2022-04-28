@@ -3,15 +3,11 @@
 	box-sizing: border-box;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 :root {
 	--primary: #79B763;
 	--primary-variant: #488656;
 	--primary-variant-light: #CCEE6C;
-	--on-primary: #0D452D;
+	--on-primary: #fff;
 	--on-primary-variant: #FFFFFF;
 	--background: #FCF5E9;
 	--on-background: #392512;
@@ -19,7 +15,12 @@ html {
 	--surface: #F1E9D9;
 	--on-surface: var(var(--on-background));
 	--on-surface-light: var(--on-background-light);
+	--link: #0D452D;
 	--on-background-image: #FFFFFF;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
 }
 
 a {
-	color: var(--on-primary);
+	color: var(--link);
 	text-decoration: none;
 }
 
@@ -43,8 +44,13 @@ button {
 	font-family: Bitter;
 	background: var(--primary);
 	color: var(--on-primary);
-	padding: 0.5rem 0.8rem;
+	padding: 0.5rem 0;
 	border: none;
+}
+
+button a {
+	color: var(--on-primary);
+	padding: 0.5rem 0.8rem;
 }
 
 button:hover {
@@ -53,7 +59,15 @@ button:hover {
 	color: var(--on-primary-variant);
 }
 
-button:hover a { color: var(--on-primary-variant); }
+button:hover a {
+	color: var(--on-primary-variant);
+	text-decoration: none;
+}
+
+button.ghost-btn {
+	background: none;
+	color: var(--on-background-light);
+}
 
 svg {
 	fill: var(--primary-variant);

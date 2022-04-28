@@ -22,20 +22,20 @@
 		</div>
 	{:else}
 		<div class="dishes" class:shown={selected === 'dishes'}>
-			<h2 class="title">Dishes</h2>
+			<img class="dish-banner" src="https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="">
 			{#each menu.dishes.slice(0,5) as dish}
-				<Dish name={dish.name} englishName={dish.englishName} />
+			<Dish name={dish.name} englishName={dish.englishName} />
 			{/each}
-			<button>
+			<button class="view-all-btn">
 				<a href="/menu">View all Dishes</a>
 			</button>
 		</div>
 		<div class="desserts" class:shown={selected === 'desserts'}>
-			<h2 class="title">Desserts</h2>
+			<img class="dish-banner" src="https://images.unsplash.com/photo-1582801205465-c0d029e85a1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="">
 			{#each menu.desserts.slice(0,5) as dessert}
 				<Dish name={dessert.name} englishName={dessert.englishName} />
 			{/each}
-			<button>
+			<button class="view-all-btn">
 				<a href="/menu#desserts">View all Desserts</a>
 			</button>
 		</div>
@@ -46,9 +46,18 @@
   .dishes,
   .desserts {
     display: none;
-		flex-direction: column;
-		padding: 1rem;
   }
+
+	.dish-banner {
+		width: 100%;
+		height: 100px;
+		object-fit: cover;
+		margin: 0.8rem 0;
+	}
+
+	.view-all-btn {
+		margin-top: 1rem;
+	}
 
 	.shown {
 		display: block;

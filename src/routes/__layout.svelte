@@ -14,6 +14,16 @@
 </footer>
 
 <style>
+	header {
+		text-align: center;
+		background: var(--primary);
+		padding: 0.5rem;
+	}
+
+	header a {
+		color: var(--on-primary);
+	}
+
 	footer {
 		text-align: center;
 		background: var(--primary-variant);

@@ -33,8 +33,12 @@
 </div>
 
 <div class="menu">
-	<button on:click={()=> menuCategory = 'dishes'}>Dishes</button>
-	<button on:click={()=> menuCategory = 'desserts'}>Desserts</button>
+	<h1>Menus</h1>
+	
+	<div class="category-btns">
+		<button class="ghost-btn" class:selected={menuCategory==='dishes'} on:click={()=> menuCategory = 'dishes'}>Dishes</button>
+		<button class="ghost-btn" class:selected={menuCategory==='desserts'} on:click={()=> menuCategory = 'desserts'}>Desserts</button>
+	</div>
 	
 	<Dishes selected={menuCategory}/>
 </div>
@@ -84,5 +88,22 @@
 		height: 150px;
 		margin: 0 auto;
 		padding-top: 1rem;
+	}
+
+	.menu { padding: 2rem; }
+
+	.menu h1 { text-align: center }
+
+	.menu .category-btns {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.menu .category-btns .selected {
+		color: var(--primary-variant);
+		text-decoration: underline;
+		font-size: 1.1em;
+		font-weight: bold;
 	}
 </style>
