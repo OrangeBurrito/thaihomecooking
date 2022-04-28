@@ -1,5 +1,6 @@
-<p style="max-width: 100px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, maxime? Soluta fugiat quas exercitationem quos cum minus blanditiis inventore, asperiores accusantium reiciendis ullam illo quam eum obcaecati odit, omnis deserunt. Enim sed vitae numquam saepe. Animi eligendi aspernatur totam deleniti ipsa nostrum eius natus doloremque itaque ducimus vitae sit, eveniet temporibus, cumque porro. Repellendus odit veritatis deserunt pariatur optio, excepturi rem illo placeat inventore expedita voluptatum perspiciatis voluptatibus cumque aliquam. Tempore molestiae blanditiis numquam saepe magnam voluptas amet vel nesciunt illo, odit iusto cumque aliquid eaque mollitia eligendi consequatur eum modi labore illum atque repellat beatae accusamus. Beatae, a accusantium.</p>
+<script>
+import Dishes from "$lib/components/Dishes.svelte";
 
-<h1 id="desserts">Desserst</h1>
+</script>
 
-<p>yay! desserts</p>
+<Dishes fullPage={true}/>

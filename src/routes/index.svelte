@@ -1,10 +1,12 @@
 <script>
-  import Dishes from "$lib/components/Menu.svelte";
+  import Dishes from "$lib/components/Dishes.svelte";
   import Features from "$lib/components/Features.svelte";
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import reviews from "$lib/reviews.json";
+	import Gallery from "$lib/components/Gallery.svelte";
+	import Contact from "$lib/components/Contact.svelte";
 
-
+	let menuCategory = 'dishes';
 </script>
 
 <div class="call-to-action">
@@ -28,6 +30,15 @@
   <p>All ingredients are included along with copies of the recipes in English.</p>
 </div>
 
-<Dishes />
+<div class="menu">
+	<button on:click={()=> menuCategory = 'dishes'}>Dishes</button>
+	<button on:click={()=> menuCategory = 'desserts'}>Desserts</button>
+	
+	<Dishes selected={menuCategory}/>
+</div>
 
 <Reviews {reviews} />
+
+<Gallery/>
+
+<Contact/>

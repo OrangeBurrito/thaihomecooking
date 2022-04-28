@@ -6,19 +6,27 @@
 </script>
 
 <div class="dish">
-	<img src={photo} alt={photoAlt}>
-	<h3>{name}</h3>
-	<p>{englishName}</p>
+	<div class="text">
+		<h3>{name}</h3>
+		<p>{englishName}</p>
+	</div>
+	{#if photo}
+		<img src={photo} alt={photoAlt}>
+	{/if}
 </div>
 
 <style>
 	.dish {
-		max-width: 180px;
+		display: flex;
+		align-self: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding-bottom: 1rem;
 	}
-	
+
 	.dish img {
-		width: 100%;
-		height: 60px;
+		width: 60px;
+		height: 40px;
 		object-fit: cover;
 	}
 </style>
