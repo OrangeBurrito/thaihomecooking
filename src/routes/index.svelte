@@ -5,6 +5,7 @@
   import reviews from "$lib/reviews.json";
 	import Gallery from "$lib/components/Gallery.svelte";
 	import Contact from "$lib/components/Contact.svelte";
+import BookingPreview from "$lib/components/BookingPreview.svelte";
 
 	let menuCategory = 'dishes';
 </script>
@@ -43,9 +44,7 @@
 	<Dishes selected={menuCategory}/>
 </div>
 
-<div id="booking">
-	<h2>bookng</h2>
-</div>
+<BookingPreview/>
 
 <Reviews {reviews} />
 
