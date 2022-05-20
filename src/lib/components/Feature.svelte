@@ -11,8 +11,13 @@
 
 <style>
 	.feature {
+		max-width: 400px;
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+	}
+
+	p {
+		padding-left: 0.5rem;
 	}
 </style>

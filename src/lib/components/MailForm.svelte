@@ -2,11 +2,10 @@
   import Input from "$lib/components/FormInput/Input.svelte";
   import NumberInput from "$lib/components/FormInput/NumberInput.svelte";
   import SelectInput from "$lib/components/FormInput/SelectInput.svelte";
-import TextareaInput from "./FormInput/TextareaInput.svelte";
+  import TextareaInput from "./FormInput/TextareaInput.svelte";
 
   export let fullForm = false;
 </script>
-
 
 {#if fullForm}
   <form action="">
@@ -36,22 +35,21 @@ import TextareaInput from "./FormInput/TextareaInput.svelte";
         <p>(choose up to three dishes)</p>
 
         <div>
-					<Input type="text" id="dish-one" name="dish-one" label="Dish #1" required/>
-					<Input type="text" id="dish-two" name="dish-two"label="Dish #2"/>
-					<Input type="text" id="dish-three" name="dish-three" label="Dish #3"/>
+          <Input type="text" id="dish-one" name="dish-one" label="Dish #1" required />
+          <Input type="text" id="dish-two" name="dish-two" label="Dish #2" />
+          <Input type="text" id="dish-three" name="dish-three" label="Dish #3" />
         </div>
-				
-				<div>
-					<TextareaInput id="comments" name="comments" label="Additional comments:"/>
-				</div>
-      </fieldset>
 
+        <div>
+          <TextareaInput id="comments" name="comments" label="Additional comments:" />
+        </div>
+      </fieldset>
     </section>
 
     <button type="submit">Submit</button>
   </form>
 {:else}
-  <form action="/booking" method="get">
+  <form method="post" action="/booking">
     <Input type="date" id="date" name="date" label="on:" required />
     <SelectInput id="session" name="session-type" required>
       <option value="morning">Morning Session</option>

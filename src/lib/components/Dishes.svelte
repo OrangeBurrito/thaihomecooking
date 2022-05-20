@@ -62,4 +62,11 @@
 	.shown {
 		display: block;
 	}
+
+	@media (min-width: 600px) {
+		.dishes, .desserts {
+			max-width: var(--max-width);
+			margin: 0 auto;
+		}
+	}
 </style>

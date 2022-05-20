@@ -6,30 +6,36 @@
   import Contact from "$lib/components/Contact.svelte";
   import Booking from "$lib/components/Booking.svelte";
   import reviews from "$lib/reviews.json";
-	
+
   let menuCategory = "dishes";
 </script>
 
 <div class="call-to-action">
-  <h1>Private Thai Home Cooking Course in Bangkok</h1>
-  <p>Learn how to cook authentic Thai food in my home kitchen.</p>
-  <button>
-    <a href="/booking">Book an appointment</a>
-  </button>
+  <div class="content">
+    <h1>Private Thai Home Cooking Course in Bangkok</h1>
+    <p>Learn how to cook authentic Thai food in my home kitchen.</p>
+    <button>
+      <a href="/booking">Book an appointment</a>
+    </button>
+  </div>
 </div>
 
 <Features />
 
 <div class="about">
-  <h2>Thai Cooking Classes</h2>
-  <p>Learn how to cook authentic Thai food in my home kitchen.</p>
-  <p>
-    Unlike traditional cooking schools, I hold private Thai cooking lessons in English or in Thai. You choose day, time, and the dishes you want to cook from my
-    family cookbook.
-  </p>
-  <p>Each lesson covers three dishes of your choice. The dishes are listed below, but you may also request dishes not listed in the dishes menu.</p>
-  <p>All ingredients are included along with copies of the recipes in English.</p>
-  <div class="about-image" />
+  <div class="content">
+    <div class="text">
+      <h2>Thai Cooking Classes</h2>
+      <p>Learn how to cook authentic Thai food in my home kitchen.</p>
+      <p>
+        Unlike traditional cooking schools, I hold private Thai cooking lessons in English or in Thai. You choose day, time, and the dishes you want to cook
+        from my family cookbook.
+      </p>
+      <p>Each lesson covers three dishes of your choice. The dishes are listed below, but you may also request dishes not listed in the dishes menu.</p>
+      <p>All ingredients are included along with copies of the recipes in English.</p>
+    </div>
+    <div class="about-image" />
+  </div>
 </div>
 
 <div class="menu">
@@ -54,9 +60,10 @@
 <style>
   .call-to-action {
     text-align: center;
-    background-image: url("https://images.unsplash.com/photo-1610452220299-5edf90b8a6ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80");
+    background-image: url('/images/overlay.png'), url("/images/menu/dishes/nam-prik-ong.JPEG");
     background-size: cover;
-    background-position: center;
+		background-position: center;
+		background-repeat: no-repeat;
     color: var(--on-background-image);
     padding: 2rem 1rem;
   }
@@ -66,16 +73,24 @@
   }
 
   .about {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     background: var(--surface);
     color: var(--on-surface);
     padding: 1.5rem;
   }
 
+  .about .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about h2 {
+    margin-bottom: 1rem;
+  }
+
   .about p {
     color: var(--on-surface-light);
+    margin-bottom: 1rem;
   }
 
   .about-image {
@@ -107,5 +122,32 @@
     text-decoration: underline;
     font-size: 1.1em;
     font-weight: bold;
+  }
+
+  @media (min-width: 600px) {
+		.call-to-action {
+			padding: 3rem 1rem;
+		}
+
+    .call-to-action .content {
+      max-width: calc(var(--max-width)/2);
+			margin: 0 auto;
+    }
+
+    .about {
+      padding: 3rem;
+    }
+
+    .about .content {
+      max-width: var(--max-width);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+    }
+
+    .about-image {
+      width: 250px;
+      height: 100%;
+    }
   }
 </style>
