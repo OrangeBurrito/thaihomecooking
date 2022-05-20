@@ -9,7 +9,7 @@
 <slot/>
 
 <footer>
-	<p>© Jane Doe 2004-2022</p>
+	<p>© Angsana Andersson 2004-2022</p>
 	<p>- Website Made By <a href="https://orangeburrito.com">OrangeBurrito</a> -</p>
 </footer>
 
