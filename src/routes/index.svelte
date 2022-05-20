@@ -14,7 +14,7 @@
   <h1>Private Thai Home Cooking Course in Bangkok</h1>
   <p>Learn how to cook authentic Thai food in my home kitchen.</p>
   <button>
-    <a href="/#booking">Book an appointment</a>
+    <a href="/booking">Book an appointment</a>
   </button>
 </div>
 
