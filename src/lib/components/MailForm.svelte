@@ -49,16 +49,34 @@
     <button type="submit">Submit</button>
   </form>
 {:else}
-  <form method="post" action="/booking">
-    <Input type="date" id="date" name="date" label="on:" required />
-    <SelectInput id="session" name="session-type" required>
+  <form method="post" action="/booking" class="preview-form">
+    <SelectInput id="session" name="session-type" required label="I'd like to book">
       <option value="morning">Morning Session</option>
       <option value="afternoon">Afternoon Session</option>
       <option value="evening">Evening Session</option>
     </SelectInput>
+    <Input type="date" id="date" name="date" label="on:" required />
     <NumberInput id="students" name="number-of-students" placeholder="2" min="1" max="10" label="for:" required>students</NumberInput>
     <div>
-      <button type="submit">Submit</button>
+      <button type="submit" class="submit-btn">Submit</button>
     </div>
   </form>
 {/if}
+
+<style>
+	form {
+		display: grid;
+		gap: 1rem;
+	}
+
+	:global(label) {
+		font-style: italic;
+		font-size: 1.1rem;
+	}
+
+	.submit-btn {
+		width: 100%;
+		padding: 0.5rem 1rem;
+		margin-top: 1rem;
+	}
+</style>

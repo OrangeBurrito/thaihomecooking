@@ -22,22 +22,30 @@
 		</div>
 	{:else}
 		<div class="dishes" class:shown={selected === 'dishes'}>
-			<img class="dish-banner" src="https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="">
-			{#each menu.dishes.slice(0,5) as dish}
-			<Dish name={dish.name} englishName={dish.englishName} />
-			{/each}
-			<button class="view-all-btn">
-				<a href="/menu">View all Dishes</a>
-			</button>
+			<img class="dish-banner" src="https://orangeburrito.blob.core.windows.net/$web/Gaeng pet linji sodsai.jpg" alt="">
+			<div class="list">
+				{#each menu.dishes.slice(0,8) as dish}
+				<Dish name={dish.name} englishName={dish.englishName} />
+				{/each}
+			</div>
+			<div class="button-wrap">
+				<button class="view-all-btn">
+					<a href="/menu">View all Dishes</a>
+				</button>
+			</div>
 		</div>
 		<div class="desserts" class:shown={selected === 'desserts'}>
 			<img class="dish-banner" src="https://images.unsplash.com/photo-1582801205465-c0d029e85a1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="">
-			{#each menu.desserts.slice(0,5) as dessert}
-				<Dish name={dessert.name} englishName={dessert.englishName} />
-			{/each}
-			<button class="view-all-btn">
-				<a href="/menu#desserts">View all Desserts</a>
-			</button>
+			<div class="list">
+				{#each menu.desserts.slice(0,5) as dessert}
+					<Dish name={dessert.name} englishName={dessert.englishName} />
+				{/each}
+			</div>
+			<div class="button-wrap">
+				<button class="view-all-btn">
+					<a href="/menu#desserts">View all Desserts</a>
+				</button>
+			</div>
 		</div>
 	{/if}
 </div>
@@ -50,7 +58,7 @@
 
 	.dish-banner {
 		width: 100%;
-		height: 100px;
+		height: 80px;
 		object-fit: cover;
 		margin: 0.8rem 0;
 	}
@@ -65,8 +73,20 @@
 
 	@media (min-width: 600px) {
 		.dishes, .desserts {
-			max-width: var(--max-width);
+			max-width: calc(var(--max-width) - 200px);
 			margin: 0 auto;
+		}
+
+		.list {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			text-align: center;
+			padding-top: 1rem;
+		}
+
+		.button-wrap {
+			text-align: center;
 		}
 	}
 </style>

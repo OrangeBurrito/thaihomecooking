@@ -1,10 +1,10 @@
 <div class="gallery">
-	<img src="/images/gallery1.jpg" alt="">
-	<img src="/images/gallery2.jpg" alt="">
-	<img src="/images/gallery3.jpg" alt="">
-	<img src="/images/gallery4.jpg" alt="">
-	<img src="/images/gallery5.jpg" alt="">
-	<img src="/images/gallery6.jpg" alt="">
+	<img src="https://orangeburrito.blob.core.windows.net/$web/khao-tang-naa-tang.jpg" alt="">
+	<img src="https://orangeburrito.blob.core.windows.net/$web/nam-prik-ong.JPEG" alt="">
+	<img src="https://orangeburrito.blob.core.windows.net/$web/tom-kaa-gai2.JPEG" alt="">
+	<img src="https://orangeburrito.blob.core.windows.net/$web/yam-pladuk-foo.jpg" alt="">
+	<img src="https://orangeburrito.blob.core.windows.net/$web/bua-loy-faktong.JPEG" alt="">
+	<img src="https://orangeburrito.blob.core.windows.net/$web/faktong-gang-sangkaya.JPEG" alt="">
 </div>
 
 <style>
@@ -16,8 +16,19 @@
 	}
 	
 	img {
-		width: 100%;
-		min-height: 180px;
-		background: gray;
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+	}
+
+	@media (min-width: 600px) {
+		.gallery {
+			padding: 1rem 3rem;
+			grid-gap: 3rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		img {
+			width: 100%;
+		}
 	}
 </style>
