@@ -4,8 +4,8 @@
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
   import Contact from "$lib/components/Contact.svelte";
-  import Booking from "$lib/components/Booking.svelte";
   import reviews from "$lib/reviews.json";
+import MailForm from "$lib/components/MailForm.svelte";
 
   let menuCategory = "dishes";
 </script>
@@ -15,7 +15,7 @@
     <h1>Private Thai Home Cooking Course in Bangkok</h1>
     <p>Learn how to cook authentic Thai food in my home kitchen.</p>
     <button>
-      <a href="/booking">Book an appointment</a>
+      <a href="#booking-form">Book an appointment</a>
     </button>
   </div>
 </div>
@@ -49,7 +49,16 @@
   <Dishes selected={menuCategory} />
 </div>
 
-<Booking />
+<div class="booking" id="booking-form">
+  <div class="text">
+    <h2>Book a cooking class</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+
+  <div class="form-wrap">
+    <MailForm />
+  </div>
+</div>
 
 <Reviews {reviews} />
 
@@ -60,10 +69,10 @@
 <style>
   .call-to-action {
     text-align: center;
-    background-image: url('/images/overlay.png'), url("/images/menu/dishes/nam-prik-ong.JPEG");
+    background-image: url("/images/overlay.png"), url("/images/menu/dishes/nam-prik-ong.JPEG");
     background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--on-background-image);
     padding: 2rem 1rem;
   }
@@ -124,14 +133,24 @@
     font-weight: bold;
   }
 
+  .booking {
+    background: var(--primary-variant);
+    color: var(--on-primary-variant);
+    padding: 1rem;
+  }
+
+  .booking .text {
+    margin-bottom: 1rem;
+  }
+
   @media (min-width: 600px) {
-		.call-to-action {
-			padding: 3rem 1rem;
-		}
+    .call-to-action {
+      padding: 3rem 1rem;
+    }
 
     .call-to-action .content {
-      max-width: calc(var(--max-width)/2);
-			margin: 0 auto;
+      max-width: calc(var(--max-width) / 2);
+      margin: 0 auto;
     }
 
     .about {
@@ -148,6 +167,22 @@
     .about-image {
       width: 250px;
       height: 100%;
+    }
+    .booking {
+      padding: 2rem;
+    }
+
+    .booking .text {
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .form-wrap,
+    .booking .text {
+      max-width: calc(var(--max-width) - 500px);
+    }
+
+    .form-wrap {
+      margin: 0 auto;
     }
   }
 </style>

@@ -1,20 +1,23 @@
 <script>
+	export let type = "";
 	export let id = "";
 	export let name = "";
 	export let label = ""
 	export let placeholder = "";
-	export let min = 0;
-	export let max = 1;
 	export let required = false;
+	export let value = "";
+
+	function handleInput(e) {
+		value = e.target.value
+	}
 </script>
 
-<div class="number-input">
+<div class="text-input">
 	<label for={id}>{label}</label>
 	{#if required}
 	<abbr title="required">*</abbr>
-	<input type="number" {id} {name} {placeholder} {min} {max} required/>
+	<input {type} {id} {name} {placeholder} on:input={handleInput} required/>
 	{:else}
-	<input type="number" {id} {name} {placeholder}/>
+	<input {type} {id} {name} {placeholder}/>
 	{/if}
-	<slot/>
 </div>
