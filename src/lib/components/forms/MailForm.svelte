@@ -13,6 +13,7 @@
     </SelectInput>
     <Input type="date" id="date" name="date" label="on:" required/>
     <NumberInput id="students" name="number-of-students" placeholder="2" min="1" max="10" label="for:" required>students</NumberInput>
+		<button type="submit">Submit</button>
 </Form>
 
 <style>
