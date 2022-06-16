@@ -10,8 +10,6 @@
   <label for={id}>{label}</label>
   {#if required}
     <abbr title="required">*</abbr>
-    <textarea {id} {name} {placeholder} required />
-  {:else}
-    <textarea {id} {name} {placeholder} />
   {/if}
+  <textarea {id} {name} {placeholder} {required} />
 </div>

@@ -16,8 +16,6 @@
 	<label for={id}>{label}</label>
 	{#if required}
 	<abbr title="required">*</abbr>
-	<input {type} {id} {name} {placeholder} on:input={handleInput} required/>
-	{:else}
-	<input {type} {id} {name} {placeholder}/>
 	{/if}
+	<input {type} {id} {name} {placeholder} on:input={handleInput} {required}/>
 </div>
