@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set([".DS_Store","favicon.png","images/.DS_Store","images/angsana.jpg","images/icons/dish.svg","images/icons/group.svg","images/icons/menu.svg","images/icons/phone.svg","images/icons/review.svg","images/icons/shopping.svg","images/icons/translate.svg","images/menu/.DS_Store","images/menu/dishes/khaopat.jpg","images/menu/dishes/nam-prik-ong.JPEG","images/overlay.png"]),
 	mimeTypes: {".png":"image/png",".jpg":"image/jpeg",".svg":"image/svg+xml",".JPEG":"image/jpeg"},
 	_: {
-		entry: {"file":"start-76313911.js","js":["start-76313911.js","chunks/index-e516f6f1.js"],"css":[]},
+		entry: {"file":"start-31a7497f.js","js":["start-31a7497f.js","chunks/index-e516f6f1.js"],"css":[]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),

@@ -275,7 +275,7 @@ const Form = (0, import_index_f2242e29.c)(($$result, $$props, $$bindings, slots)
   if ($$props.onSubmit === void 0 && $$bindings.onSubmit && onSubmit !== void 0)
     $$bindings.onSubmit(onSubmit);
   $$result.css.add(css$3);
-  return `<form${(0, import_index_f2242e29.j)("name", name, 0)}${(0, import_index_f2242e29.j)("method", method, 0)}${(0, import_index_f2242e29.j)("netlify", netlify, 0)} class="${"svelte-1ktanq2"}">${slots.default ? slots.default({}) : ``}
+  return `<form${(0, import_index_f2242e29.j)("name", name, 0)}${(0, import_index_f2242e29.j)("method", method, 0)}${(0, import_index_f2242e29.j)("data-netlify", netlify, 0)} class="${"svelte-1ktanq2"}">${slots.default ? slots.default({}) : ``}
 	
 </form>`;
 });

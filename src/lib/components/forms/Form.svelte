@@ -6,6 +6,9 @@
 </script>
 
 <form {name} {method} data-netlify={netlify}>
+	{#if netlify}
+		<input type="hidden" name="form-name" value={name} />
+	{/if}
   <slot />
 	<!-- <button type="submit" class="submit-btn" on:click={onSubmit}>Submit</button> -->
 </form>
