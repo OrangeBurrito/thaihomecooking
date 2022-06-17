@@ -8,14 +8,11 @@
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
   import Contact from "$lib/components/Contact.svelte";
-  import MailForm from "$lib/components/forms/MailForm.svelte";
   import StepForm from "$lib/components/forms/StepForm.svelte";
   import reviews from "$lib/reviews.json";
 	
   let menuCategory = "dishes";
 </script>
-
-<StepForm />
 
 <div class="call-to-action">
   <div class="content">
@@ -63,7 +60,7 @@
   </div>
 
   <div class="form-wrap">
-    <MailForm />
+		<StepForm/>
   </div>
 </div>
 
