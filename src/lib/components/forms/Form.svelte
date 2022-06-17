@@ -5,7 +5,7 @@
 	export function onSubmit() {}
 </script>
 
-<form {name} {method} {netlify}>
+<form {name} {method} data-netlify={netlify}>
   <slot />
 	<!-- <button type="submit" class="submit-btn" on:click={onSubmit}>Submit</button> -->
 </form>
