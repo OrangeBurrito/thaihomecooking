@@ -524,8 +524,7 @@ var reviews = [
   {
     review: "Very good services, I am made of bees",
     reviewer: "Jane Doe",
-    reviewerLocation: "Seattle",
-    pfp: "jane.jpg"
+    reviewerLocation: "Seattle"
   },
   {
     review: "Very grub services, I am made of crullers",

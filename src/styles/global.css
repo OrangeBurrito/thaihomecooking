@@ -1,82 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Literata:opsz,wght@7..72,500&display=swap');
 
 * {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-	--primary: #79B763;
-	--primary-variant: #488656;
-	--primary-variant-light: #CCEE6C;
-	--on-primary: #fff;
-	--on-primary-variant: #FFFFFF;
-	--background: #FCF5E9;
-	--on-background: #392512;
-	--on-background-light: #573F31;
-	--surface: #F1E9D9;
-	--on-surface: var(var(--on-background));
-	--on-surface-light: var(--on-background-light);
-	--link: #0D452D;
-	--on-background-image: #FFFFFF;
+  --primary: #79b763;
+  --primary-variant: #488656;
+  --primary-variant-light: #ccee6c;
+  --on-primary: #fff;
+  --on-primary-variant: #ffffff;
+  --background: #fcf5e9;
+  --on-background: #392512;
+  --on-background-light: #573f31;
+  --surface: #f1e9d9;
+  --on-surface: var(var(--on-background));
+  --on-surface-light: var(--on-background-light);
+  --link: #0d452d;
+  --on-background-image: #ffffff;
 
-	--text-font: Palatino, Book Antiqua, serif;
-	--link-font: Bitter, monospace;
+  --text-font: Sabon Next LT Pro, serif;
+  --header-font: Literata, Georgia, serif;
+  --link-font: Bitter, monospace;
 
-	--max-width: 850px;
+  --max-width: 850px;
+}
+
+@font-face {
+	font-family: "Sabon Next LT Pro";
+	src: url('/fonts/SabonNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Sabon Next LT Pro";
+	font-style: italic;
+	src: url('/fonts/SabonNextLTPro-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Sabon Next LT Pro";
+	font-weight: bold;
+	src: url('/fonts/SabonNextLTPro-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Sabon Next LT Pro";
+	font-weight: bold;
+	font-style: italic;
+	src: url('/fonts/SabonNextLTPro-BoldItalic.otf') format('opentype');
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	background: var(--background);
-	color: var(--on-background);
-	font-family: var(--text-font);
-	line-height: 1.35;
+  background: var(--background);
+  color: var(--on-background);
+  font-family: var(--text-font);
+  line-height: 1.35;
+}
+
+h1,h2,h3 {
+  font-family: var(--header-font);
+  line-height: 1.1;
 }
 
 a {
-	color: var(--link);
-	text-decoration: none;
+  color: var(--link);
+  text-decoration: none;
+}
+
+a.link-light {
+  color: var(--primary-variant-light);
+  text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 button {
-	font-size: inherit;
-	font-family: var(--link-font);
-	background: var(--primary);
-	color: var(--on-primary);
-	padding: 0.5rem 0;
-	border: none;
+  font-size: inherit;
+  font-family: var(--link-font);
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 0.4rem 0.8rem;
+  border: none;
+	flex-basis: 0;
+}
+
+button.secondary {
+  background: none;
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--primary);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--primary);
+  box-shadow: inset 0px 0px 0px 2px var(--primary);
+}
+
+button.secondary:hover {
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
 }
 
 button a {
-	color: var(--on-primary);
-	padding: 0.5rem 0.8rem;
+  color: var(--on-primary);
+  padding: 0.5rem 0.8rem;
 }
 
 button:hover {
-	cursor: pointer;
-	background: var(--primary-variant);
-	color: var(--on-primary-variant);
+  cursor: pointer;
+  background: var(--primary-variant);
+  color: var(--on-primary-variant);
 }
 
 button:hover a {
-	color: var(--on-primary-variant);
-	text-decoration: none;
+  color: var(--on-primary-variant);
+  text-decoration: none;
 }
 
 button.ghost-btn {
-	background: none;
-	color: var(--on-background-light);
+  background: none;
+  color: var(--on-background-light);
 }
 
 svg {
-	fill: var(--primary-variant);
-	transform: scale(1.5);
+  fill: var(--primary-variant);
+  transform: scale(1.5);
+}
+
+form label {
+  font-style: italic;
+}
+
+form input, form textarea {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-bottom: 1px solid var(--on-primary);
+  margin-top: 0.4rem;
+  color: var(--on-primary);
 }

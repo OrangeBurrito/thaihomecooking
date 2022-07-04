@@ -24,15 +24,16 @@
 </script>
 
 <div class="reviews-wrap">
-	<button class="review-button" on:click={previousReview}>PREV</button>
+	<h2>What Students are Saying</h2>
 	<div class="reviews">
 		<Review
-			review={currentReview.review}
-			reviewer={currentReview.reviewer}
-			reviewerProfile={currentReview.pfp}
-			reviewerLocation={currentReview.reviewerLocation}
-			/>
+		review={currentReview.review}
+		reviewer={currentReview.reviewer}
+		reviewerProfile={currentReview.pfp}
+		reviewerLocation={currentReview.reviewerLocation}
+		/>
 	</div>
+	<button class="review-button" on:click={previousReview}>PREV</button>
 	<button class="review-button" on:click={nextReview}>NEXT</button>
 	<div class="dots">
 		{#each reviews as r, i}
@@ -42,8 +43,21 @@
 </div>
 
 <style>
+	.reviews-wrap {
+		display: grid;
+		flex-direction: column;
+		gap: 1rem;
+		background: var(--surface);
+		padding: 2rem;
+	}
+
+	.reviews-wrap h2 {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+
 	.dots {
-		padding: 1rem;
+		padding: 2rem;
 	}
 	.dot {
 		display: inline-block;

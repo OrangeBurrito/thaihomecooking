@@ -16,15 +16,18 @@
 
 <div class="call-to-action">
   <div class="content">
-    <h1>Private Thai Home Cooking Course in Bangkok</h1>
-    <p>Learn how to cook authentic Thai food in my home kitchen.</p>
+    <h1>Learn how to cook authentic Thai food in my home kitchen</h1>
+		<p>Experience an in-person, personalized cooking class in a traditional Thai kitchen</p>
     <button>
-      <a href="#booking-form">Book an appointment</a>
+      <a href="#booking-form">Book a cooking class</a>
+    </button>
+    <button class="secondary">
+      <a href="/menu">See the menu</a>
     </button>
   </div>
 </div>
 
-<Features />
+<!-- <Features /> -->
 
 <div class="about">
   <div class="content">
@@ -42,6 +45,8 @@
   </div>
 </div>
 
+<Reviews {reviews} />
+
 <div class="menu">
   <h1>Menus</h1>
 
@@ -55,16 +60,13 @@
 
 <div class="booking" id="booking-form">
   <div class="text">
-    <h2>Book a cooking class</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h2>Book a cooking class</h2>  
   </div>
-
-  <div class="form-wrap">
+	
+	<div class="form-wrap">
 		<StepForm/>
   </div>
 </div>
-
-<Reviews {reviews} />
 
 <Gallery />
 
@@ -86,8 +88,8 @@
   }
 
   .about {
-    background: var(--surface);
-    color: var(--on-surface);
+    background: var(--background);
+    color: var(--on-background);
     padding: 1.5rem;
   }
 

@@ -10,7 +10,7 @@
 
 <footer>
 	<p>© Angsana Andersson 2004-2022</p>
-	<p>- Website Made By <a href="https://orangeburrito.com">OrangeBurrito</a> -</p>
+	<p>- Website Made By <a class="link-light" href="https://orangeburrito.com">OrangeBurrito</a> -</p>
 </footer>
 
 <style>
@@ -33,9 +33,5 @@
 
 	footer p:first-of-type {
 		padding-bottom: 0.5rem;
-	}
-
-	footer a {
-		color: var(--primary-variant-light);
 	}
 </style>
