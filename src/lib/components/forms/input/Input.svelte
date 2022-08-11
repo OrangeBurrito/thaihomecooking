@@ -4,6 +4,7 @@
   export let name = "";
 	export let min = undefined;
 	export let max = undefined;
+	export let value = undefined;
   export let label = "";
   export let placeholder = "";
   export let required = false;
@@ -20,7 +21,7 @@
 			<slot/>
 		</select>
 	{:else }
-  <input {type} {id} {name} {min} {max} {placeholder} {required} />
+  <input {type} {id} {name} {min} {max} {placeholder} {value} {required} />
 	{/if}
 	<span>{suffix}</span>
 </div>

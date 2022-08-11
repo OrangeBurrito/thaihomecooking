@@ -20,9 +20,12 @@
   --link: #0d452d;
   --on-background-image: #ffffff;
 
-  --text-font: Sabon Next LT Pro, serif;
+  --text-font: Droid Serif, Sabon Next LT Pro, serif;
   --header-font: Literata, Georgia, serif;
   --link-font: Bitter, monospace;
+
+	--min-font-size: 10px;
+	--max-font-size: 18px;
 
   --max-width: 850px;
 }
@@ -52,6 +55,7 @@
 }
 
 html {
+	font-size: clamp(var(--min-font-size), 10vw, var(--max-font-size));
   scroll-behavior: smooth;
 }
 

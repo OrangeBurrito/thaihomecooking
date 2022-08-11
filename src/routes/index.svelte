@@ -8,7 +8,6 @@
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
   import Contact from "$lib/components/Contact.svelte";
-  import StepForm from "$lib/components/forms/StepForm.svelte";
   import reviews from "$lib/reviews.json";
 	
   let menuCategory = "dishes";
@@ -18,12 +17,6 @@
   <div class="content">
     <h1>Learn how to cook authentic Thai food in my home kitchen</h1>
 		<p>Experience an in-person, personalized cooking class in a traditional Thai kitchen</p>
-    <button>
-      <a href="#booking-form">Book a cooking class</a>
-    </button>
-    <button class="secondary">
-      <a href="/menu">See the menu</a>
-    </button>
   </div>
 </div>
 
@@ -56,16 +49,6 @@
   </div>
 
   <Dishes selected={menuCategory} />
-</div>
-
-<div class="booking" id="booking-form">
-  <div class="text">
-    <h2>Book a cooking class</h2>  
-  </div>
-	
-	<div class="form-wrap">
-		<StepForm/>
-  </div>
 </div>
 
 <Gallery />
@@ -184,7 +167,7 @@
 
     .form-wrap,
     .booking .text {
-      max-width: calc(var(--max-width) - 500px);
+      max-width: calc(var(--max-width) - 400px);
     }
 
     .form-wrap {

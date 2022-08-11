@@ -45,8 +45,8 @@
       <option value="afternoon">Afternoon Session</option>
       <option value="evening">Evening Session</option>
 		</Input>
-    <Input type="date" id="date" name="date" min={new Date().toLocaleDateString('en-CA')} label="during" required />
-    <Input type="number" id="students" name="number-of-students" placeholder="2" min="1" max="10" label="for" suffix="students" required/>
+    <Input type="date" id="date" name="date" min={new Date().toLocaleDateString('en-CA')} label="date" required />
+    <Input type="number" id="students" name="number-of-students" placeholder="2" min="1" max="10" label="for" value="1" suffix="students" required/>
   </section>
 
   <section class="form-section" data-step="2" class:shown={currentForm === 2}>

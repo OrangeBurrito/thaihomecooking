@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<h2><a href="/">Thai Home Cooking</a></h2>
+	<h3><a href="/">Thai Home Cooking</a></h3>
 </header>
 
 <slot/>
