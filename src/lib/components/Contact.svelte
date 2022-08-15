@@ -1,30 +1,65 @@
-<div class="contact">
-  <h2>Contact</h2>
-  <div class="contact-section hours">
-    <h3>Hours</h3>
-    <p>Monday-Saturday 9 a.m. - 7 p.m.</p>
-  </div>
-  <div class="contact-section location">
-    <h3>Location & Phone</h3>
-    <p>2424 Malabar Avenue<br />Bangkok, Thailand 10130</p>
-    <div class="contact-item">
-      <img src="/images/icons/phone.svg" alt="" class="icon" />
-      <p><strong>(+66)</strong> 088 888 8888</p>
+<script>
+  import Icon from "./Icon.svelte";
+</script>
+
+<section class="contact flex fullpage">
+  <section class="main-info">
+    <div class="text">
+      <h2>Contact Me</h2>
+      <p>Contact me for more information, or to make an appointment.</p>
     </div>
-  </div>
-  <div class="contact-section social-media">
-    <h3>Email & Social Media</h3>
-    <div class="contact-item">
-      <img src="/images/icons/mail.svg" alt="" class="icon" />
-      <a href="mailto:someone@gmail.com">something@gmail.com</a>
+    <div class="contact-info flex">
+      <div class="social-media">
+        <a href="https://www.facebook.com/thaihomecooking" target="_blank">
+          <Icon color={"var(--facebook-blue)"} glyph="facebook" />
+        </a>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class-Bangkok.html" target="_blank">
+          <Icon color={"var(--tripadvisor-green)"} glyph="tripadvisor" fill="var(--black)" />
+        </a>
+        <Icon color={"var(--white)"} glyph="" />
+      </div>
+      <div class="info">
+        <div class="location">
+          <h4>Thai Home Cooking</h4>
+          <p>123 Sukhumvit Soi 12, Bangkok 12345</p>
+          <a href="#">Get Directions</a>
+        </div>
+        <div class="email">
+          <p>chef@thaihomecooking.com</p>
+        </div>
+        <div class="number">
+          <p>(+66) 02 2222 2202</p>
+        </div>
+      </div>
     </div>
-    <a href="/">Facebook</a>
-    <a href="/">TripAdvisor</a>
-  </div>
-</div>
+  </section>
+  <section>
+		<div class="map-container">
+			<iframe src="https://www.google.com/maps/d/embed?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&ehbc=2E312F" width="640" height="480" />
+		</div>
+  </section>
+</section>
 
 <style>
   .contact {
-    padding: 1rem;
+    background: var(--surface);
   }
+
+  .main-info {
+    padding: var(--space-2xl) var(--space-4xl);
+    /* background: red; */
+  }
+
+  .social-media a {
+    display: block;
+    padding-bottom: var(--space-base);
+  }
+
+	.map-container {
+		position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+	}
 </style>

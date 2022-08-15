@@ -6,19 +6,24 @@
 }
 
 :root {
+	--black: #000000;
+	--white: #ffffff;
   --primary: #79b763;
   --primary-variant: #488656;
   --primary-variant-light: #ccee6c;
-  --on-primary: #fff;
-  --on-primary-variant: #ffffff;
+  --on-primary: var(--white);
+  --on-primary-variant: var(--white);
   --background: #fcf5e9;
   --on-background: #392512;
   --on-background-light: #573f31;
   --surface: #f1e9d9;
   --on-surface: var(var(--on-background));
   --on-surface-light: var(--on-background-light);
+  --on-background-image: var(--white);
   --link: #0d452d;
-  --on-background-image: #ffffff;
+	--facebook-blue: #314D98;
+	--tripadvisor-green: #34E0A1;
+
 
   --text-font: Droid Serif, Sabon Next LT Pro, serif;
   --header-font: Literata, Georgia, serif;
@@ -26,6 +31,25 @@
 
 	--min-font-size: 10px;
 	--max-font-size: 18px;
+
+	--text-xs: 0.75rem; /* 12px */
+	--text-sm: 0.875rem; /* 14px */
+	--text-base: 1rem; /* 16px */
+	--text-lg: 1.125rem; /* 18px */
+	--text-xl: 1.25rem; /* 20px */
+	--text-2xl: 1.5rem; /* 24px */
+	--text-3xl: 2rem; /* 32px */
+	--text-4xl: 2.5rem; /* 40px */
+
+	--space-xs: 0.5em;
+	--space-sm: 0.75em;
+	--space-base: 1em;
+	--space-med: 1.25em;
+	--space-lg: 1.5em;
+	--space-xl: 2em;
+	--space-2xl: 2.5em;
+	--space-3xl: 3em;
+	--space-4xl: 4em;
 
   --max-width: 850px;
 }
@@ -68,7 +92,31 @@ body {
 
 h1,h2,h3 {
   font-family: var(--header-font);
-  line-height: 1.1;
+}
+
+h1 { 
+	font-size: var(--text-4xl);
+	line-height: 1;
+}
+
+h2 { 
+	font-size: var(--text-3xl);
+	line-height: 1.1;
+}
+
+h3 { 
+	font-size: var(--text-2xl);
+	line-height: 1.2;
+}
+
+h4 { 
+	font-size: var(--text-xl);
+	line-height: 1.3;
+}
+
+p {
+	color: var(--on-surface-light);
+	margin-bottom: var(--space-base);
 }
 
 a {
@@ -85,6 +133,28 @@ a:hover {
   text-decoration: underline;
 }
 
+body > div > section {
+	max-width: var(--max-width);
+	margin: 0 auto;
+}
+
+section.fullpage {
+	max-width: 100%;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* 
 button {
   font-size: inherit;
   font-family: var(--link-font);
@@ -128,23 +198,4 @@ button:hover a {
 button.ghost-btn {
   background: none;
   color: var(--on-background-light);
-}
-
-svg {
-  fill: var(--primary-variant);
-  transform: scale(1.5);
-}
-
-form label {
-  font-style: italic;
-}
-
-form input, form textarea {
-  background: none;
-  outline: none;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-bottom: 1px solid var(--on-primary);
-  margin-top: 0.4rem;
-  color: var(--on-primary);
-}
+} */

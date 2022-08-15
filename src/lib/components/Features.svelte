@@ -14,7 +14,7 @@
 	<h2>Why Thai Home Cooking?</h2>
 	<div class="list">
 		{#each featureData as feature}
-		<Feature icon={`/images/icons/${feature.icon}`} text={feature.text}/>
+		<Feature icon={`/icons/${feature.icon}`} text={feature.text}/>
 		{/each}
 	</div>
 </div>

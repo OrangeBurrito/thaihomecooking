@@ -1,46 +1,79 @@
 <script context="module">
-	export const prerender = true;
+  export const prerender = true;
 </script>
 
 <script>
+  import "../styles/global.css";
   import Dishes from "$lib/components/Dishes.svelte";
-  import Features from "$lib/components/Features.svelte";
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
   import Contact from "$lib/components/Contact.svelte";
   import reviews from "$lib/reviews.json";
-	
+
   let menuCategory = "dishes";
 </script>
 
-<div class="call-to-action">
-  <div class="content">
-    <h1>Learn how to cook authentic Thai food in my home kitchen</h1>
-		<p>Experience an in-person, personalized cooking class in a traditional Thai kitchen</p>
+<section class="hero-banner flex-center fullpage">
+  <img class="logo" src="/images/thaihomecooking_logo.png" alt="" />
+  <div class="text">
+    <h1>Private Thai Cooking Course in Bangkok</h1>
+    <p>Learn how to cook authentic Thai food in my home kitchen</p>
   </div>
-</div>
+</section>
 
 <!-- <Features /> -->
 
-<div class="about">
-  <div class="content">
-    <div class="text">
-      <h2>Thai Cooking Classes</h2>
-      <p>Learn how to cook authentic Thai food in my home kitchen.</p>
-      <p>
-        Unlike traditional cooking schools, I hold private Thai cooking lessons in English or in Thai. You choose day, time, and the dishes you want to cook
-        from my family cookbook.
-      </p>
-      <p>Each lesson covers three dishes of your choice. The dishes are listed below, but you may also request dishes not listed in the dishes menu.</p>
-      <p>All ingredients are included along with copies of the recipes in English.</p>
-    </div>
-    <div class="about-image" />
-  </div>
-</div>
+<section class="about">
+  <section class="text">
+		<div class="text">
+			<h2>Thai Cooking Classes</h2>
+			<p>Learn how to cook authentic Thai food in my home kitchen.</p>
+			<p>Unlike traditional cooking schools, I hold private Thai cooking lessons in English or in Thai.</p>
+			<p>You choose the day, time and the dishes you want to cook from my family cookbook containing 100+ recipes gathered over three generations. </p>
+		</div>
+		<img src="/images/angsana.jpg" alt="">
+  </section>
+	<section class="text">
+		<div class="text">
+			<p>Each lesson covers three dishes of your choice. The dishes are listed below, but you may also request dishes not listed in the dishes menu.</p>
+			<p>Optional trip to the market is available for morning lessons, please let me know when booking if you would like to go to the market with me.</p>
+			<p>All ingredients are included along with copies of the recipes in English.</p>
+		</div>
+		<img src="" alt="">
+	</section>
+	<section>
+		<h3>Pricing</h3>
+		<div class="pricing-option">
+			<span>1 person</span>
+			<span>
+				<span class="currency">
+					<sup>THB</sup>
+					<strong>3500</strong>
+				</span>
+				 per lesson</span>
+		</div>
+		<div class="pricing-option">
+			<span>2-4 people</span>
+			<span><span class="currency">
+				<sup>THB</sup>
+				<strong>2500</strong>
+			</span>/person and lesson</span>
+		</div>
+		<div class="pricing-option">
+			<span>5-6 people</span>
+			<span><span class="currency">
+				<sup>THB</sup>
+				<strong>2000</strong>
+			</span>/person and lesson</span>
+		</div>
+	</section>
+</section>
+
+<Contact />
 
 <Reviews {reviews} />
 
-<div class="menu">
+<section class="menu">
   <h1>Menus</h1>
 
   <div class="category-btns">
@@ -49,48 +82,50 @@
   </div>
 
   <Dishes selected={menuCategory} />
-</div>
+</section>
 
 <Gallery />
 
-<Contact />
 
 <style>
-  .call-to-action {
-    text-align: center;
+  .hero-banner {
     background-image: url("/images/overlay.png"), url("/images/menu/dishes/nam-prik-ong.JPEG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    gap: var(--space-lg);
+    text-align: center;
     color: var(--on-background-image);
-    padding: 2rem 1rem;
+    padding: var(--space-xl) 0 var(--space-4xl) 0;
   }
 
-  .call-to-action p {
+  .logo {
+    height: var(--space-4xl);
+  }
+
+  .hero-banner .text {
+    max-width: 60ch;
+  }
+
+  .hero-banner p {
     padding: 1rem 0;
   }
 
   .about {
     background: var(--background);
     color: var(--on-background);
-    padding: 1.5rem;
+    padding: var(--space-lg);
   }
 
-  .about .content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+	.about section.text {
+		display: flex;
+	}
 
-  .about h2 {
-    margin-bottom: 1rem;
-  }
-
-  .about p {
-    color: var(--on-surface-light);
-    margin-bottom: 1rem;
-  }
-
+	.pricing-option:first-child {
+		color: red;
+	}
+/* 
   .about-image {
     background-image: url("/images/angsana.jpg");
     background-position: center;
@@ -99,7 +134,7 @@
     height: 150px;
     margin: 0 auto;
     padding-top: 1rem;
-  }
+  } */
 
   .menu {
     padding: 2rem;
@@ -122,22 +157,12 @@
     font-weight: bold;
   }
 
-  .booking {
-    background: var(--primary-variant);
-    color: var(--on-primary-variant);
-    padding: 1rem;
-  }
-
-  .booking .text {
-    margin-bottom: 1rem;
-  }
-
-  @media (min-width: 600px) {
-    .call-to-action {
+  /* @media (min-width: 600px) {
+    .hero-banner {
       padding: 3rem 1rem;
     }
 
-    .call-to-action .content {
+    .hero-banner .content {
       max-width: calc(var(--max-width) / 2);
       margin: 0 auto;
     }
@@ -157,21 +182,5 @@
       width: 250px;
       height: 100%;
     }
-    .booking {
-      padding: 2rem;
-    }
-
-    .booking .text {
-      margin: 0 auto 1.5rem auto;
-    }
-
-    .form-wrap,
-    .booking .text {
-      max-width: calc(var(--max-width) - 400px);
-    }
-
-    .form-wrap {
-      margin: 0 auto;
-    }
-  }
+  }*/
 </style>

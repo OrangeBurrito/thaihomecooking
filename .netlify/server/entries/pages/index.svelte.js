@@ -162,7 +162,7 @@ const Features = (0, import_index_f2242e29.c)(($$result, $$props, $$bindings, sl
   return `<div class="${"features svelte-1ru4nhz"}"><h2>Why Thai Home Cooking?</h2>
 	<div class="${"list svelte-1ru4nhz"}">${(0, import_index_f2242e29.i)(featureData, (feature) => {
     return `${(0, import_index_f2242e29.v)(Feature, "Feature").$$render($$result, {
-      icon: `/images/icons/${feature.icon}`,
+      icon: `/icons/${feature.icon}`,
       text: feature.text
     }, {}, {})}`;
   })}</div>
