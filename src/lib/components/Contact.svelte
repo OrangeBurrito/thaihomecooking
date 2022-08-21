@@ -2,7 +2,7 @@
   import Icon from "./Icon.svelte";
 </script>
 
-<section class="contact flex fullpage">
+<section class="contact grid-2 fullpage">
   <section class="main-info">
     <div class="text">
       <h2>Contact Me</h2>
@@ -14,7 +14,7 @@
           <Icon color={"var(--facebook-blue)"} glyph="facebook" />
         </a>
         <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class-Bangkok.html" target="_blank">
-          <Icon color={"var(--tripadvisor-green)"} glyph="tripadvisor" fill="var(--black)" />
+          <Icon color={"var(--tripadvisor-green)"} glyph="tripadvisor" dark/>
         </a>
         <Icon color={"var(--white)"} glyph="" />
       </div>
@@ -24,19 +24,21 @@
           <p>123 Sukhumvit Soi 12, Bangkok 12345</p>
           <a href="#">Get Directions</a>
         </div>
-        <div class="email">
+        <div class="email oneline">
+					<h5>Email:</h5>
           <p>chef@thaihomecooking.com</p>
         </div>
-        <div class="number">
+        <div class="number oneline">
+					<h5>Phone:</h5>
           <p>(+66) 02 2222 2202</p>
         </div>
       </div>
     </div>
   </section>
   <section>
-		<div class="map-container">
-			<iframe src="https://www.google.com/maps/d/embed?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&ehbc=2E312F" width="640" height="480" />
-		</div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&ehbc=2E312F" width="640" height="480" />
+    </div>
   </section>
 </section>
 
@@ -50,16 +52,21 @@
     /* background: red; */
   }
 
+	.contact-info .location {
+		padding-bottom: var(--space-xl);
+	}
+
+	.contact-info .oneline > * {
+		display: inline-block;
+	}
+
   .social-media a {
     display: block;
     padding-bottom: var(--space-base);
   }
 
-	.map-container {
-		position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 35px;
-    height: 0;
-    overflow: hidden;
-	}
+  .map-container {
+    width: 100%;
+		background: red;
+  }
 </style>

@@ -71,7 +71,8 @@
 
 <Contact />
 
-<Reviews {reviews} />
+<Reviews/>
+<!-- <Reviews {reviews} /> -->
 
 <section class="menu">
   <h1>Menus</h1>
