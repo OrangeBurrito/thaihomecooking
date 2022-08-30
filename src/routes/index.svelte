@@ -4,13 +4,10 @@
 
 <script>
   import "../styles/global.css";
-  import Dishes from "$lib/components/Dishes.svelte";
+  import Menu from "$lib/components/Menu.svelte";
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
   import Contact from "$lib/components/Contact.svelte";
-  import reviews from "$lib/reviews.json";
-
-  let menuCategory = "dishes";
 </script>
 
 <section class="hero-banner flex-center fullpage">
@@ -75,14 +72,7 @@
 <!-- <Reviews {reviews} /> -->
 
 <section class="menu">
-  <h1>Menus</h1>
-
-  <div class="category-btns">
-    <button class="ghost-btn" class:selected={menuCategory === "dishes"} on:click={() => (menuCategory = "dishes")}>Dishes</button>
-    <button class="ghost-btn" class:selected={menuCategory === "desserts"} on:click={() => (menuCategory = "desserts")}>Desserts</button>
-  </div>
-
-  <Dishes selected={menuCategory} />
+  <Menu/>
 </section>
 
 <Gallery />

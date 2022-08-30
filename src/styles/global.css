@@ -154,7 +154,7 @@ body > div > section {
 	margin: 0 auto;
 }
 
-section.fullpage {
+.fullpage {
 	max-width: 100%;
 }
 

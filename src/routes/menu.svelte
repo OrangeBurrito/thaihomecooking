@@ -1,5 +1,5 @@
 <script>
-import Dishes from "$lib/components/Dishes.svelte";
+import Dishes from "$lib/components/Menu.svelte";
 
 </script>
 
