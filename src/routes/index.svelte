@@ -68,14 +68,14 @@
 
 <Contact />
 
-<Reviews/>
-<!-- <Reviews {reviews} /> -->
+<section class="flex grow-to-fullpage center">
+	<Reviews/>
+</section>
 
-<section class="menu">
+<section class="fullpage">
   <Menu/>
 </section>
 
-<Gallery />
 
 
 <style>
@@ -126,27 +126,6 @@
     margin: 0 auto;
     padding-top: 1rem;
   } */
-
-  .menu {
-    padding: 2rem;
-  }
-
-  .menu h1 {
-    text-align: center;
-  }
-
-  .menu .category-btns {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .menu .category-btns .selected {
-    color: var(--primary-variant);
-    text-decoration: underline;
-    font-size: 1.1em;
-    font-weight: bold;
-  }
 
   /* @media (min-width: 600px) {
     .hero-banner {

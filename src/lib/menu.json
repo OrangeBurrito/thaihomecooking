@@ -49,6 +49,41 @@
 			"photo": "gungpatpriowwaan.jpg",
 			"name": "Gung Pat Priow Waan",
 			"description": "Sweet and Sour Shrimp"
+		},
+		{
+			"photo": "patthaigung.jpg",
+			"name": " Pat Thai Gung",
+			"description": "Fried Noodles with Shrimp"
+		},
+		{
+			"photo": "plagapongneungmanao.jpg",
+			"name": " Pla Ga-pong Neung Manao",
+			"description": "Steamed sea bass with lemon, chili and garlic sauce"
+		},
+		{
+			"photo": "yummooyang.jpg",
+			"name": "Yum Moo Yang",
+			"description": "Spicy grilled pork salad"
+		},
+		{
+			"photo": "yumpakbunggrob.jpg",
+			"name": "Yum Pak Bung Grob",
+			"description": "Crispy deep fried morning glory salad"
+		},
+		{
+			"photo": "gaengsomplachonpaesa.jpg",
+			"name": "Gaeng Som Plachon Pae-sa",
+			"description": "Sweet & sour soup with deep-fried snakehead fish"
+		},
+		{
+			"photo": "gungchuppaengtod.jpg",
+			"name": "Gung Chup Paeng Tod",
+			"description": "Deep-fried shrimps"
+		},
+		{
+			"photo": "patseeew.jpg",
+			"name": "Pat See Ew",
+			"description": "Stir fried noodles with soy sauce, pork and egg"
 		}
 	],
 	"desserts": [

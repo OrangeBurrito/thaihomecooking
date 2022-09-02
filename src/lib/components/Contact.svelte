@@ -11,12 +11,12 @@
     <div class="contact-info flex">
       <div class="social-media">
         <a href="https://www.facebook.com/thaihomecooking" target="_blank">
-          <Icon color={"var(--facebook-blue)"} glyph="facebook" />
+          <Icon icon="facebook" fill={'var(--white)'} size={'var(--space-xl)'} rounded={"var(--facebook-blue)"}/>
         </a>
         <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class-Bangkok.html" target="_blank">
-          <Icon color={"var(--tripadvisor-green)"} glyph="tripadvisor" dark/>
+          <Icon icon="tripadvisor" size={'var(--space-xl)'} rounded={"var(--tripadvisor-green)"} dark/>
         </a>
-        <Icon color={"var(--white)"} glyph="" />
+        <Icon rounded={"var(--white)"}/>
       </div>
       <div class="info">
         <div class="location">

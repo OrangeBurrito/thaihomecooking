@@ -3,7 +3,7 @@
   import Icon from "../Icon.svelte";
 </script>
 
-<div class="reviews flex-vertical center fullpage">
+<div class="reviews flex-vertical center">
   <h2>What Students are Saying</h2>
   <main>
     <section class="tripadvisor-widget flex-vertical">
@@ -48,7 +48,7 @@
 	}
 
   .reviews main {
-		display: grid;
+		display: inline-grid;
 		grid-template-columns: 1fr 2fr;
 		grid-gap: var(--space-xl);
 	}

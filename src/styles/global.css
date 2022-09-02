@@ -41,6 +41,7 @@
 	--text-3xl: 2rem; /* 32px */
 	--text-4xl: 2.5rem; /* 40px */
 
+	--space-xxs: 0.25em;
 	--space-xs: 0.5em;
 	--space-sm: 0.75em;
 	--space-base: 1em;
@@ -51,7 +52,7 @@
 	--space-3xl: 3em;
 	--space-4xl: 4em;
 
-  --max-width: 850px;
+  --max-width: 1024px;
 }
 
 @font-face {
@@ -154,8 +155,13 @@ body > div > section {
 	margin: 0 auto;
 }
 
+
 .fullpage {
 	max-width: 100%;
+}
+
+.grow-to-fullpage {
+	width: 100%;
 }
 
 .flex {

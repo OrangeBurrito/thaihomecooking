@@ -1,33 +1,27 @@
 <script>
 	import InlineSVG from 'svelte-inline-svg'
 
-	export let color = ''
-	export let small = false
-	export let dark = false
-	export let glyph = 'mail'
+	export let icon = "mail"
+	export let fill = "var(--black)"
+	export let size = 'var(--space-med)'
+	export let rounded = ""
 
 	$: attributes = {
-
-    width: small ? 'var(--space-med)' : 'var(--space-xl)',
-    height: small ? 'var(--space-med)' : 'var(--space-xl)',
-		fill: dark ? 'var(--black)' : 'var(--white)'
-  }    
-
+		width: size,
+		height: size,
+		fill: fill
+	}
 </script>
 
-<div class="icon flex-center" class:color={color} class:small={small} style={`background: ${color};`}>
-	<InlineSVG src={`/icons/${glyph}.svg`} {...attributes}/>
+<div class="icon" class:rounded={rounded} style={`background: ${rounded}`}>
+	<InlineSVG src={`/icons/${icon}.svg`} {...attributes}/>
 </div>
 
 <style>
-	.color {
-		height: var(--space-3xl);
-		width: var(--space-3xl);
+	.rounded {
+		display: flex;
+		align-items: center;
+		padding: var(--space-sm);
 		border-radius: 50%;
-	}
-
-	.small {
-		height: var(--space-med);
-		width: var(--space-med);
 	}
 </style>
