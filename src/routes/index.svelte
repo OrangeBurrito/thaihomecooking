@@ -6,22 +6,21 @@
   import "../styles/global.css";
   import Menu from "$lib/components/Menu.svelte";
   import Reviews from "$lib/components/reviews/Reviews.svelte";
-  import Gallery from "$lib/components/Gallery.svelte";
   import Contact from "$lib/components/Contact.svelte";
+import Pricing from "$lib/components/Pricing.svelte";
 </script>
 
-<section class="hero-banner flex-center fullpage">
-  <img class="logo" src="/images/thaihomecooking_logo.png" alt="" />
+<section class="hero-banner flex-vertical center fullpage">
+  <img class="logo" src="/images/thaihomecooking_logo_light.png" alt="" />
   <div class="text">
     <h1>Private Thai Cooking Course in Bangkok</h1>
     <p>Learn how to cook authentic Thai food in my home kitchen</p>
   </div>
 </section>
 
-<!-- <Features /> -->
 
 <section class="about">
-  <section class="text">
+  <section class="text flex gap-xl">
 		<div class="text">
 			<h2>Thai Cooking Classes</h2>
 			<p>Learn how to cook authentic Thai food in my home kitchen.</p>
@@ -30,39 +29,16 @@
 		</div>
 		<img src="/images/angsana.jpg" alt="">
   </section>
-	<section class="text">
+	<section class="text flex">
+		<img src="https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-6/286361277_5385921434793364_4998705551832895895_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a26aad&_nc_ohc=zLC5Ij7ydOkAX8I1_hO&_nc_ht=scontent.fbkk13-1.fna&oh=00_AT_YSiUhKSACWCPRMKYy5zzQSs46vTUxBT0hv1QQtOQscA&oe=631A0560" alt="">
 		<div class="text">
 			<p>Each lesson covers three dishes of your choice. The dishes are listed below, but you may also request dishes not listed in the dishes menu.</p>
 			<p>Optional trip to the market is available for morning lessons, please let me know when booking if you would like to go to the market with me.</p>
 			<p>All ingredients are included along with copies of the recipes in English.</p>
 		</div>
-		<img src="" alt="">
 	</section>
 	<section>
-		<h3>Pricing</h3>
-		<div class="pricing-option">
-			<span>1 person</span>
-			<span>
-				<span class="currency">
-					<sup>THB</sup>
-					<strong>3500</strong>
-				</span>
-				 per lesson</span>
-		</div>
-		<div class="pricing-option">
-			<span>2-4 people</span>
-			<span><span class="currency">
-				<sup>THB</sup>
-				<strong>2500</strong>
-			</span>/person and lesson</span>
-		</div>
-		<div class="pricing-option">
-			<span>5-6 people</span>
-			<span><span class="currency">
-				<sup>THB</sup>
-				<strong>2000</strong>
-			</span>/person and lesson</span>
-		</div>
+		<Pricing/>
 	</section>
 </section>
 
@@ -88,11 +64,12 @@
     gap: var(--space-lg);
     text-align: center;
     color: var(--on-background-image);
-    padding: var(--space-xl) 0 var(--space-4xl) 0;
+    padding: var(--space-base) 0 var(--space-4xl) 0;
   }
 
   .logo {
     height: var(--space-4xl);
+		margin-bottom: var(--space-xl);
   }
 
   .hero-banner .text {
@@ -100,21 +77,18 @@
   }
 
   .hero-banner p {
-    padding: 1rem 0;
+		color: var(--white);
   }
 
   .about {
     background: var(--background);
     color: var(--on-background);
-    padding: var(--space-lg);
+    padding: var(--space-xl);
   }
 
-	.about section.text {
-		display: flex;
-	}
-
-	.pricing-option:first-child {
-		color: red;
+	.about img {
+		max-width: 200px;
+		height: auto;
 	}
 /* 
   .about-image {

@@ -18,6 +18,9 @@
 </div>
 
 <style>
+	.icon {
+		display: inline-block;
+	}
 	.rounded {
 		display: flex;
 		align-items: center;

@@ -106,7 +106,7 @@ h2 {
 }
 
 h3 { 
-	font-size: var(--text-2xl);
+	font-size: var(--text-xl);
 	line-height: 1.2;
 }
 
@@ -120,8 +120,15 @@ h5 {
 	line-height: 1.35;
 }
 
+.text h1, .text h2, .text h3, .pad {
+	padding-bottom: var(--space-xs);
+}
+
 p {
 	color: var(--on-surface-light);
+}
+
+.text p {
 	margin-bottom: var(--space-base);
 }
 
@@ -155,6 +162,9 @@ body > div > section {
 	margin: 0 auto;
 }
 
+section.text {
+	padding-bottom: var(--space-2xl);
+}
 
 .fullpage {
 	max-width: 100%;
@@ -173,6 +183,10 @@ body > div > section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-lg);
+}
+
+.gap-xl {
+	gap: var(--space-xl);
 }
 
 .center {

@@ -33,7 +33,7 @@
           <h4>{blogpost.title}</h4>
           <a class="post-link flex center" href={blogpost.url} target="_blank">
             <p class="subheader">{blogpost.blogTitle}</p>
-            <Icon small glyph="open_in_new" dark />
+            <Icon icon="open_in_new" fill="var(--link)"/>
           </a>
         </div>
       {/each}

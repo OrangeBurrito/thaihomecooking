@@ -16,13 +16,12 @@
         <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class-Bangkok.html" target="_blank">
           <Icon icon="tripadvisor" size={'var(--space-xl)'} rounded={"var(--tripadvisor-green)"} dark/>
         </a>
-        <Icon rounded={"var(--white)"}/>
       </div>
       <div class="info">
         <div class="location">
           <h4>Thai Home Cooking</h4>
           <p>123 Sukhumvit Soi 12, Bangkok 12345</p>
-          <a href="#">Get Directions</a>
+          <a href="https://www.google.com/maps/d/viewer?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&usp=sharing" target="_blank">Get Directions <Icon icon="open_in_new" fill="var(--link)"/></a>
         </div>
         <div class="email oneline">
 					<h5>Email:</h5>
@@ -49,15 +48,14 @@
 
   .main-info {
     padding: var(--space-2xl) var(--space-4xl);
-    /* background: red; */
   }
-
-	.contact-info .location {
-		padding-bottom: var(--space-xl);
-	}
 
 	.contact-info .oneline > * {
 		display: inline-block;
+	}
+
+	.info > * {
+		padding-bottom: var(--space-base);
 	}
 
   .social-media a {
