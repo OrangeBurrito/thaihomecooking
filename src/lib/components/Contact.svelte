@@ -24,11 +24,11 @@
           <a href="https://www.google.com/maps/d/viewer?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&usp=sharing" target="_blank">Get Directions <Icon icon="open_in_new" fill="var(--link)"/></a>
         </div>
         <div class="email oneline">
-					<h5>Email:</h5>
+					<h5 class="subheader">Email:</h5>
           <p>chef@thaihomecooking.com</p>
         </div>
         <div class="number oneline">
-					<h5>Phone:</h5>
+					<h5 class="subheader">Phone:</h5>
           <p>(+66) 02 2222 2202</p>
         </div>
       </div>

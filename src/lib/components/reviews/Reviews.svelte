@@ -4,7 +4,7 @@
 </script>
 
 <div class="reviews flex-vertical center">
-  <h2>What Students are Saying</h2>
+  <h2 class="accent">What Students are Saying</h2>
   <main>
     <section class="tripadvisor-widget flex-vertical">
 			<h3>TripAdvisor Reviews</h3>
@@ -32,7 +32,7 @@
         <div class="blogpost flex-vertical">
           <h4>{blogpost.title}</h4>
           <a class="post-link flex center" href={blogpost.url} target="_blank">
-            <p class="subheader">{blogpost.blogTitle}</p>
+            <h4 class="subsubheader">{blogpost.blogTitle}</h4>
             <Icon icon="open_in_new" fill="var(--link)"/>
           </a>
         </div>

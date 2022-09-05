@@ -2,26 +2,37 @@
   import Icon from "./Icon.svelte";
   import MenuItem from "./MenuItem.svelte";
 
-	import menu from "$lib/menu.json";
-
-
   export let arr = [];
   export let sliceByAmount = 6;
 
 	let minSlice = 0;
 	let maxSlice = sliceByAmount;
 
+	let backDisabled = true
+	let forwardDisabled = false
+
 	function previousItem() {
 		if (minSlice >= sliceByAmount) {
+			if (minSlice === +sliceByAmount) { 
+				backDisabled = true // disable back button
+			}
+			forwardDisabled = false
 			minSlice = minSlice - +sliceByAmount;
 			maxSlice = maxSlice - +sliceByAmount;
 		}
 	}
 	
 	function nextItem() {
-		if (maxSlice <= arr.length) {
+		console.log(maxSlice, arr.length)
+		if (maxSlice >= arr.length-1) {
+			console.log('ee')
+			forwardDisabled = true
+		}
+		if (maxSlice <= arr.length-1) {
+			backDisabled = false
 			minSlice = minSlice + +sliceByAmount;
 			maxSlice = +maxSlice + +sliceByAmount;
+			console.log(maxSlice, arr.length)
 		}
 	}
 </script>
@@ -34,10 +45,10 @@
   </div>
 
   <div class="buttons flex">
-    <button on:click={previousItem}>
+    <button class:disabled={backDisabled} on:click={previousItem}>
       <Icon icon="arrow_back" size="var(--space-4xl)" />
     </button>
-    <button on:click={nextItem}>
+    <button class:disabled={forwardDisabled} on:click={nextItem}>
       <Icon icon="arrow_forward" size="var(--space-4xl)" />
     </button>
   </div>
@@ -69,4 +80,10 @@
     background: none;
 		border: none;
   }
+
+	.disabled {
+		opacity: 0.5;
+		cursor:not-allowed;
+		border: 1px solid red;
+	}
 </style>

@@ -22,7 +22,7 @@ import Pricing from "$lib/components/Pricing.svelte";
 <section class="about">
   <section class="text flex gap-xl">
 		<div class="text">
-			<h2>Thai Cooking Classes</h2>
+			<h2 class="accent">Thai Cooking Classes</h2>
 			<p>Learn how to cook authentic Thai food in my home kitchen.</p>
 			<p>Unlike traditional cooking schools, I hold private Thai cooking lessons in English or in Thai.</p>
 			<p>You choose the day, time and the dishes you want to cook from my family cookbook containing 100+ recipes gathered over three generations. </p>
@@ -85,6 +85,12 @@ import Pricing from "$lib/components/Pricing.svelte";
     color: var(--on-background);
     padding: var(--space-xl);
   }
+
+	.about p::first-letter {
+		font-weight: bold;
+		font-size: var(--text-xl);
+		color: var(--on-background);
+	}
 
 	.about img {
 		max-width: 200px;

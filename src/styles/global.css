@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Literata:opsz,wght@7..72,500&display=swap');
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -8,26 +6,28 @@
 :root {
 	--black: #000000;
 	--white: #ffffff;
-  --primary: #79b763;
-  --primary-variant: #488656;
-  --primary-variant-light: #ccee6c;
+  --primary: #66A474;
+  --primary-variant: #396B53;
+  --primary-variant-light: #9CFA8D;
   --on-primary: var(--white);
   --on-primary-variant: var(--white);
-  --background: #fcf5e9;
-  --on-background: #392512;
-  --on-background-light: #573f31;
-  --surface: #f1e9d9;
+  --background: #FBF1E6;
+  --on-background: #3D2421;
+  --on-background-light: #4e3831;
+	--on-background-lighter: #674C43;
+  --surface: #F1E5D9;
   --on-surface: var(var(--on-background));
   --on-surface-light: var(--on-background-light);
+  --on-surface-lighter: var(--on-background-lighter);
   --on-background-image: var(--white);
-  --link: #0d452d;
+  --link: #103C34;
 	--facebook-blue: #314D98;
 	--tripadvisor-green: #34E0A1;
 
 
-  --text-font: Droid Serif, Sabon Next LT Pro, serif;
+  --text-font: Palatino, Droid Serif, Sabon Next LT Pro, serif;
   --header-font: Literata, Georgia, serif;
-  --link-font: Bitter, monospace;
+  --link-font: monospace;
 
 	--min-font-size: 10px;
 	--max-font-size: 18px;
@@ -40,6 +40,12 @@
 	--text-2xl: 1.5rem; /* 24px */
 	--text-3xl: 2rem; /* 32px */
 	--text-4xl: 2.5rem; /* 40px */
+
+	--fw-regular: 400;
+	--fw-semibold: 500;
+	--fw-bold: 700;
+	--fw-extrabold: 800;
+	--fw-black: 900;
 
 	--space-xxs: 0.25em;
 	--space-xs: 0.5em;
@@ -56,27 +62,18 @@
 }
 
 @font-face {
-	font-family: "Sabon Next LT Pro";
-	src: url('/fonts/SabonNextLTPro-Regular.otf') format('opentype');
+	font-family: "Literata";
+	src: url('/fonts/Literata-VariableFont_opsz,wght.ttf') format('truetype supports variations'),
+			 url('/fonts/Literata-VariableFont_opsz,wght.ttf') format('truetype-variations');
+	font-weight: 200 900;
 }
 
 @font-face {
-	font-family: "Sabon Next LT Pro";
+	font-family: "Literata";
 	font-style: italic;
-	src: url('/fonts/SabonNextLTPro-Italic.otf') format('opentype');
-}
-
-@font-face {
-	font-family: "Sabon Next LT Pro";
-	font-weight: bold;
-	src: url('/fonts/SabonNextLTPro-Bold.otf') format('opentype');
-}
-
-@font-face {
-	font-family: "Sabon Next LT Pro";
-	font-weight: bold;
-	font-style: italic;
-	src: url('/fonts/SabonNextLTPro-BoldItalic.otf') format('opentype');
+	src: url('/fonts/Literata-Italic-VariableFont_opsz,wght.ttf') format('truetype supports variations'),
+			 url('/fonts/Literata-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+	font-weight: 200 900;
 }
 
 html {
@@ -93,6 +90,7 @@ body {
 
 h1,h2,h3,h4,h5 {
   font-family: var(--header-font);
+	font-weight: var(--fw-bold);
 }
 
 h1 { 
@@ -120,12 +118,32 @@ h5 {
 	line-height: 1.35;
 }
 
-.text h1, .text h2, .text h3, .pad {
-	padding-bottom: var(--space-xs);
-}
-
 p {
 	color: var(--on-surface-light);
+}
+
+.accent {
+	color: var(--primary-variant);
+}
+
+.secondary {
+	color: var(--on-surface-lighter);
+}
+
+.subheader {
+	font-weight: var(--fw-semibold);
+}
+
+.subsubheader {
+	font-weight: var(--fw-regular);
+}
+
+.text p {
+	max-width: 70ch;
+}
+
+.text h1, .text h2, .text h3, .pad {
+	padding-bottom: var(--space-xs);
 }
 
 .text p {
@@ -140,6 +158,8 @@ p.subheader {
 }
 
 a {
+	font-family: Literata;
+	font-weight: 400;
   color: var(--link);
   text-decoration: none;
 }
@@ -164,6 +184,7 @@ body > div > section {
 
 section.text {
 	padding-bottom: var(--space-2xl);
+	justify-content: space-between;
 }
 
 .fullpage {
