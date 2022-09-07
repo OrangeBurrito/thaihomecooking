@@ -5,39 +5,42 @@
   export let arr = [];
   export let sliceByAmount = 6;
 
-	let minSlice = 0;
-	let maxSlice = sliceByAmount;
+  let minSlice = 0;
+  let maxSlice = sliceByAmount;
 
-	let backDisabled = true
-	let forwardDisabled = false
+  let backDisabled = true;
+  let forwardDisabled = false;
 
-	function previousItem() {
-		if (minSlice >= sliceByAmount) {
-			if (minSlice === +sliceByAmount) { 
-				backDisabled = true // disable back button
+  function previousItem() {
+		if (!backDisabled) {
+			if (minSlice <= sliceByAmount) {
+				backDisabled = true;
 			}
-			forwardDisabled = false
+			if (maxSlice <= arr.length) {
+				forwardDisabled = false;
+			}
+	
 			minSlice = minSlice - +sliceByAmount;
 			maxSlice = maxSlice - +sliceByAmount;
 		}
-	}
-	
-	function nextItem() {
-		console.log(maxSlice, arr.length)
-		if (maxSlice >= arr.length-1) {
-			console.log('ee')
-			forwardDisabled = true
-		}
-		if (maxSlice <= arr.length-1) {
-			backDisabled = false
-			minSlice = minSlice + +sliceByAmount;
-			maxSlice = +maxSlice + +sliceByAmount;
-			console.log(maxSlice, arr.length)
-		}
-	}
+  }
+
+  function nextItem() {
+    if (!forwardDisabled) {
+      if (maxSlice >= arr.length - sliceByAmount) {
+        forwardDisabled = true;
+      }
+      if (maxSlice >= sliceByAmount && maxSlice < sliceByAmount + 1) {
+        backDisabled = false;
+      }
+      minSlice = minSlice + +sliceByAmount;
+      maxSlice = +maxSlice + +sliceByAmount;
+    }
+  }
 </script>
 
 <div class="menu-section">
+  <p>{arr.length}</p>
   <div class="menu-items">
     {#each arr.slice(minSlice, maxSlice) as menuItem}
       <MenuItem image={menuItem.photo} name={menuItem.name} description={menuItem.description} />
@@ -68,8 +71,8 @@
 
   .buttons {
     width: 115%;
-		right: -7.5%;
-		/* right: 1%; */
+    right: -7.5%;
+    /* right: 1%; */
     top: 35%;
     position: absolute;
     justify-content: space-between;
@@ -78,12 +81,12 @@
   button {
     cursor: pointer;
     background: none;
-		border: none;
+    border: none;
   }
 
-	.disabled {
-		opacity: 0.5;
-		cursor:not-allowed;
-		border: 1px solid red;
-	}
+  .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border: 1px solid red;
+  }
 </style>
