@@ -1,50 +1,34 @@
 <script>
-  import MenuSection from "./MenuSection.svelte";
-  import menu from "$lib/menu.json";
-  import { onMount } from "svelte";
-
-	let dishesAmount = 8
-	let dessertsAmount = 4
-
-	let getVariable = () => {}
-
-  onMount(() => {
-		getVariable = (variable) => {
-			return getComputedStyle(document.body).getPropertyValue(variable)
-		}
-  })
-
-		$: dishesAmount = getVariable("--dishes-displayed")
-		$: dessertsAmount = getVariable("--desserts-displayed")
-
-		function changeVal() {
-			dishesAmount = 2
-			console.log(dishesAmount)
-		}
+	import menu from "$lib/menu.json";
+  import MenuItems from "./MenuItems.svelte";
 </script>
 
-
-<button on:click={changeVal}>changeval</button>
-<div class="menu flex-vertical center">
-  <section class="dishes">
-    <h2>Dishes</h2>
-    <MenuSection arr={menu.dishes} sliceByAmount={dishesAmount} />
-  </section>
-  <section class="desserts">
-    <h2>Desserts</h2>
-    <MenuSection arr={menu.desserts} sliceByAmount={dessertsAmount} />
-  </section>
+<div class="menu-section">
+	<header>
+		<h1>Menu</h1>
+		<span class="line">a line</span>
+	</header>
+	<div class="dishes">
+		<h2 class="category-header">Dishes</h2>
+		<MenuItems data={menu.dishes}/>
+	</div>
+	<div class="desserts">
+		<h2 class="category-header">Desserts</h2>
+		<MenuItems data={menu.desserts} hideLess/>
+	</div>
 </div>
 
 <style>
-  section h2 {
-    text-align: center;
-    padding-bottom: var(--space-lg);
-  }
+	.menu-section {
+		max-width: 80vw;
+		margin: 0 auto;
+	}
 
-  @media screen and (max-width: 1200px) {
-		:root {
-			--dishesAmount: 6;
-		}
-  }
+	.menu-section header {
+		text-align: center;
+	}
+
+	.category-header {
+		margin-bottom: var(--space-base);
+	}
 </style>
