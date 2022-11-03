@@ -40,7 +40,6 @@
 </script>
 
 <div class="menu-section">
-  <p>{arr.length}</p>
   <div class="menu-items">
     {#each arr.slice(minSlice, maxSlice) as menuItem}
       <MenuItem image={menuItem.photo} name={menuItem.name} description={menuItem.description} />

@@ -22,7 +22,7 @@
 		display: inline-block;
 	}
 	.rounded {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		padding: var(--space-sm);
 		border-radius: 50%;

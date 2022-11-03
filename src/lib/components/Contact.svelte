@@ -2,7 +2,7 @@
   import Icon from "./Icon.svelte";
 </script>
 
-<section class="contact grid-2 fullpage">
+<section class="contact flex space-between fullpage">
   <section class="main-info">
     <div class="text">
       <h2>Contact Me</h2>
@@ -65,6 +65,13 @@
 
   .map-container {
     width: 100%;
-		background: red;
+		background: salmon;
   }
+
+	@media (max-width: 750px) {
+		.social-media {
+			display: flex;
+			gap: var(--space-base);
+		}
+	}
 </style>
