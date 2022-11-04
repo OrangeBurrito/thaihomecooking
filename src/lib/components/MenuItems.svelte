@@ -19,9 +19,9 @@
 </div>
 
 {#if showAll === false}
-	<button on:click={()=>{showAll = true}}>▼ See More</button>
+	<button on:click={()=>{showAll = true}}><span>▼</span> See More</button>
 {:else}
-	<button on:click={()=>{showAll = false}}>▲ See Less</button>
+	<button on:click={()=>{showAll = false}}><span>▲</span> See Less</button>
 {/if}
 <style>
 	.menu-items {
@@ -30,20 +30,19 @@
 		gap: var(--space-lg);
 	}
 
-
-	
-
-	.hide-items:nth-child(n+9),
-	.hide-less:nth-child(n+5),
-	button.hide-items {
-		visibility: hidden;
-		opacity: 0;
-		height: 0;
-	}
-
 	button {
+		cursor: pointer;
 		background: var(--surface);
 		padding: var(--space-base);
-		font-family: inherit;
+		font-family: var(--header-font);
+		font-size: var(--text-base);
+		outline: none;
+		border: none;
+		padding: var(--space-base) var(--space-lg);
+		margin: var(--space-lg) 0 var(--space-xl) 0;
+	}
+	
+	button span {
+		margin-right: var(--space-xs);
 	}
 </style>

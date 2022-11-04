@@ -9,11 +9,11 @@
 		<span class="line">a line</span>
 	</header>
 	<div class="dishes">
-		<h2 class="category-header">Dishes</h2>
+		<h2>Dishes</h2>
 		<MenuItems data={menu.dishes}/>
 	</div>
 	<div class="desserts">
-		<h2 class="category-header">Desserts</h2>
+		<h2>Desserts</h2>
 		<MenuItems data={menu.desserts} hideNum=4/>
 	</div>
 </div>
@@ -28,7 +28,7 @@
 		text-align: center;
 	}
 
-	.category-header {
+	h2 {
 		margin-bottom: var(--space-base);
 	}
 </style>
