@@ -26,23 +26,33 @@
 <style>
 	.menu-items {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
 		gap: var(--space-lg);
 	}
 
 	button {
-		cursor: pointer;
-		background: var(--surface);
-		padding: var(--space-base);
-		font-family: var(--header-font);
-		font-size: var(--text-base);
-		outline: none;
-		border: none;
-		padding: var(--space-base) var(--space-lg);
+		
 		margin: var(--space-lg) 0 var(--space-xl) 0;
 	}
 	
 	button span {
 		margin-right: var(--space-xs);
+	}
+
+	@media screen and (min-width: 400px) {
+		.menu-items {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media screen and (min-width: 680px) {
+		.menu-items {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media screen and (min-width: 950px) {
+		.menu-items {
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 </style>

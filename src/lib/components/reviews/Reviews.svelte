@@ -30,9 +30,9 @@
 			<h3>Reviews from Bloggers</h3>
       {#each blogposts as blogpost}
         <div class="blogpost flex-vertical">
-          <h4>{blogpost.title}</h4>
+          <h5>{blogpost.title}</h5>
           <a class="post-link flex center" href={blogpost.url} target="_blank">
-            <h4 class="subsubheader">{blogpost.blogTitle}</h4>
+            <div class="subsubheader">{blogpost.blogTitle}</div>
             <Icon icon="open_in_new" fill="var(--link)"/>
           </a>
         </div>
@@ -53,8 +53,10 @@
 	}
 
   .tripadvisor-widget {
+		width: 100%;
 		background: var(--surface);
 		padding: var(--space-base) var(--space-lg);
+		margin-bottom: var(--space-xl);
   }
 
 	.tripadvisor-widget:global(#CDSWIDSSP) {
@@ -76,11 +78,15 @@
 		gap: var(--space-sm);
 	}
 
-	@media (min-width: 750px) {
+	@media (min-width: 700px) {
 		.reviews main {
 		display: inline-grid;
 		grid-template-columns: 1fr 2fr;
 		grid-gap: var(--space-xl);
-	}
+		}
+
+		.tripadvisor-widget {
+			margin-bottom: 0;
+		}
 	}
 </style>

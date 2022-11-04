@@ -6,12 +6,15 @@
 <style>
 	footer {
 		text-align: center;
-		background: var(--primary-variant);
-		color: var(--on-primary-variant);
-		padding: 1rem;
+		background: var(--primary-dark);	
+		padding: var(--space-base);
+	}
+
+	footer p {
+		color: var(--on-primary-dark);
 	}
 
 	footer p:first-of-type {
-		padding-bottom: 0.5rem;
+		padding-bottom: var(--space-xs);
 	}
 </style>

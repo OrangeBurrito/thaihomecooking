@@ -8,6 +8,7 @@
   import Reviews from "$lib/components/reviews/Reviews.svelte";
   import Contact from "$lib/components/Contact.svelte";
 import Pricing from "$lib/components/Pricing.svelte";
+  import Footer from "$lib/Footer.svelte";
 </script>
 
 <section class="hero-banner flex-vertical center fullpage">
@@ -52,7 +53,7 @@ import Pricing from "$lib/components/Pricing.svelte";
   <Menu/>
 </section>
 
-
+<Footer/>
 
 <style>
   .hero-banner {
