@@ -14,7 +14,7 @@
 	</div>
 	<div class="desserts">
 		<h2 class="category-header">Desserts</h2>
-		<MenuItems data={menu.desserts} hideLess/>
+		<MenuItems data={menu.desserts} hideNum=4/>
 	</div>
 </div>
 

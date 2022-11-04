@@ -1,26 +1,28 @@
 <script>
-	export let data = {}
-	export let hideLess = false
+  import MenuItem from "./MenuItem.svelte";
 
-	let hideItems = true
+	export let data = {}
+	export let hideNum = 8
+
+	let showAll = false
 </script>
 
 <div class="menu-items">
-	{#each data as dish}
-		<div class="menu-item"
-		class:hide-items={hideItems === true && hideLess === false}
-		class:hide-less={hideItems === true && hideLess === true}
-		>
-			<img src={dish.photo} alt="">
-			<h4 class="title">{dish.name}</h4>
-			<p>{dish.description}</p>
-		</div>
+	{#each data.slice(0, hideNum) as dish}
+		<MenuItem data={dish}/>
 	{/each}
+	{#if showAll}
+		{#each data.slice(hideNum) as dish}
+			<MenuItem data={dish} transition/>
+		{/each}
+	{/if}
 </div>
 
-<button on:click={()=>{hideItems = false}} class:hide-items={hideItems === false}>See More</button>
-<button on:click={()=>{hideItems = true}} class:hide-items={hideItems === true}>See Less</button>
-
+{#if showAll === false}
+	<button on:click={()=>{showAll = true}}>▼ See More</button>
+{:else}
+	<button on:click={()=>{showAll = false}}>▲ See Less</button>
+{/if}
 <style>
 	.menu-items {
 		display: grid;
@@ -28,20 +30,15 @@
 		gap: var(--space-lg);
 	}
 
-	.menu-item img {
-		height: 150px;
-		width: 100%;
-		background: green;
-	}
 
-	.menu-item .title {
-		margin-bottom: var(--space-xxs);
-	}
+	
 
 	.hide-items:nth-child(n+9),
 	.hide-less:nth-child(n+5),
 	button.hide-items {
-		display: none;
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
 	}
 
 	button {
