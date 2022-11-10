@@ -165,12 +165,9 @@ button:hover {
   max-width: 70ch;
 }
 
-.text h1,
-.text h2,
-.text h3,
-.pad {
-  padding-bottom: var(--space-xs);
-}
+.text h1 { margin-bottom: var(--space-xs); }
+
+.text h2, .text h3 { margin-bottom: var(--space-xxs); }
 
 .text p {
   margin-bottom: var(--space-base);

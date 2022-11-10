@@ -27,10 +27,10 @@
 	.menu-items {
 		display: grid;
 		gap: var(--space-lg);
+		grid-template-columns: 1fr 1fr;
 	}
 
-	button {
-		
+	button {	
 		margin: var(--space-lg) 0 var(--space-xl) 0;
 	}
 	
@@ -39,9 +39,9 @@
 	}
 
 	@media screen and (min-width: 400px) {
-		.menu-items {
+		/* .menu-items {
 			grid-template-columns: 1fr 1fr;
-		}
+		} */
 	}
 
 	@media screen and (min-width: 680px) {

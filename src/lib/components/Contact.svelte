@@ -35,21 +35,54 @@
         </div>
       </div>
     </div>
+		<!-- <a class="iframe-header" href="https://www.google.com/maps/d/u/0/viewer?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE" target="_blank">
+			<h4>Thai Home Cooking</h4>
+			<Icon icon="open_in_new" fill="var(--on-background)"/>
+		</a> -->
   </section>
-  <iframe class="map" title="Thai Homecooking Google Maps Location" src="https://www.google.com/maps/d/embed?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&ehbc=2E312F" allowfullscreen></iframe>
+  <iframe
+    class="map"
+    title="Thai Homecooking Google Maps Location"
+    src="https://www.google.com/maps/d/embed?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE&ehbc=2E312F"
+    frameborder="0"
+    style="border:0"
+    allowfullscreen
+  />
 </section>
 
 <style>
   .contact {
-		/* --contactHeight: clamp(400px, 50%, 380px); */
-		/* height: var(--contactHeight); */
-		width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     background: var(--surface);
   }
 
   .main-info {
+    position: relative;
     padding: var(--space-2xl) var(--space-4xl);
   }
+
+  .main-info .text {
+    margin-bottom: var(--space-lg);
+  }
+
+  .iframe-header {
+    position: absolute;
+		display: flex;
+		gap: 0.5rem;
+
+    z-index: 1;
+    top: 0.8rem;
+    right: calc(-3rem - 25ch - 3rem);
+		padding: 0.4rem 1rem;
+
+		color: var(--on-background);
+    background: var(--background);
+		border: 4px solid var(--on-background);
+		border-radius: 25px;
+  }
+
+	.iframe-header h4 {font-weight: normal ; font-family: 'Integral CF'}
 
   .contact-info .oneline > * {
     display: inline-block;
@@ -64,12 +97,16 @@
     margin-bottom: var(--space-base);
   }
 
-	iframe {
-		flex-grow: 1; border: none; margin: 0; padding: 0;
-	}
+  iframe {
+    position: relative;
+    flex-grow: 1;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 
   @media (max-width: 750px) {
-
+    .contact,
     .contact-info {
       flex-direction: column;
     }
@@ -79,13 +116,13 @@
       gap: var(--space-base);
     }
 
-		.social-media a {
-			margin-top: var(--space-base);
-			margin-bottom: 0;
-		}
+    .social-media a {
+      margin-top: var(--space-base);
+      margin-bottom: 0;
+    }
 
-		iframe {
-			display: none;
-		}
+    iframe {
+      height: 300px;
+    }
   }
 </style>

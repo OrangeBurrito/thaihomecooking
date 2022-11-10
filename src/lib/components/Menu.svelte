@@ -30,7 +30,7 @@
 
 	.menu-section hr {
 		border:0;
-    height:20px;
+    height: 20px;
     background-image: url('/images/motif.png');
 		background-size: auto 20px;
 		background-position: center;

@@ -20,12 +20,18 @@
 
 <style>
 	.menu-item img {
-		height: 150px;
+		height: 100px;
 		width: 100%;
-		background: green;
+		background: var(--primary-dark);
 	}
 
 	.menu-item .title {
 		margin-bottom: var(--space-xxs);
+	}
+
+	@media screen and (min-width: 680px) {
+		.menu-item img {
+			height: 150px;
+		}
 	}
 </style>
