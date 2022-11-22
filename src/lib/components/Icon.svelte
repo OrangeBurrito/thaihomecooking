@@ -20,6 +20,8 @@
 <style>
 	.icon {
 		display: inline-block;
+		max-width: 32px;
+		max-height: 32px;
 	}
 	
 	.rounded {
