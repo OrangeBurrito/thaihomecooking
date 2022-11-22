@@ -20,8 +20,6 @@
 <style>
 	.icon {
 		display: inline-block;
-		max-width: 32px;
-		max-height: 32px;
 	}
 	
 	.rounded {
@@ -29,5 +27,12 @@
 		align-items: center;
 		padding: var(--space-sm);
 		border-radius: 50%;
+	}
+
+	@media screen and (max-width: 650px) {
+		.icon {
+			max-width: 24px;
+			max-height: 24px;
+		}
 	}
 </style>
