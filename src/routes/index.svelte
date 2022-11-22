@@ -31,7 +31,7 @@ import Pricing from "$lib/components/Pricing.svelte";
 		<img src="/images/angsana.jpg" alt="">
   </section>
 	<section class="text flex">
-		<img src="https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-6/286361277_5385921434793364_4998705551832895895_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a26aad&_nc_ohc=zLC5Ij7ydOkAX8I1_hO&_nc_ht=scontent.fbkk13-1.fna&oh=00_AT_YSiUhKSACWCPRMKYy5zzQSs46vTUxBT0hv1QQtOQscA&oe=631A0560" alt="">
+		<img src="https://orangeburrito.blob.core.windows.net/$web/dishes/tom_kha_gai__1.jpg" alt="">
 		<div class="text">
 			<p>Each lesson covers three dishes of your choice. The dishes are listed below, but you may also request dishes not listed in the dishes menu.</p>
 			<p>Optional trip to the market is available for morning lessons, please let me know when booking if you would like to go to the market with me.</p>
@@ -65,12 +65,11 @@ import Pricing from "$lib/components/Pricing.svelte";
     gap: var(--space-lg);
     text-align: center;
     color: var(--on-background-image);
-    padding: var(--space-base) 0 var(--space-4xl) 0;
+    padding: var(--space-base);
   }
 
   .logo {
     height: var(--space-4xl);
-		margin-bottom: var(--space-xl);
   }
 
   .hero-banner .text {
@@ -94,44 +93,24 @@ import Pricing from "$lib/components/Pricing.svelte";
 	}
 
 	.about img {
-		max-width: 200px;
-		height: auto;
+		max-height: 200px;
+		width: 250px;
+		object-fit: cover;
 	}
-/* 
-  .about-image {
-    background-image: url("/images/angsana.jpg");
-    background-position: center;
-    background-size: cover;
-    width: 200px;
-    height: 150px;
-    margin: 0 auto;
-    padding-top: 1rem;
-  } */
 
-  /* @media (min-width: 600px) {
-    .hero-banner {
-      padding: 3rem 1rem;
-    }
+	.about section:nth-of-type(2) {
+		flex-direction: column-reverse;
+	}
 
-    .hero-banner .content {
-      max-width: calc(var(--max-width) / 2);
-      margin: 0 auto;
-    }
+	@media screen and (min-width: 650px) {
+		.logo { margin-bottom: var(--space-base); }
 
-    .about {
-      padding: 3rem;
-    }
+		.hero-banner {
+			padding: var(--space-base) 0 var(--space-4xl) 0;
+		}
 
-    .about .content {
-      max-width: var(--max-width);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin: 0 auto;
-    }
-
-    .about-image {
-      width: 250px;
-      height: 100%;
-    }
-  }*/
+		.about section, .about section:nth-of-type(2) {
+			flex-direction: row;
+		}
+	}
 </style>

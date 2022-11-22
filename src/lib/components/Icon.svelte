@@ -21,6 +21,7 @@
 	.icon {
 		display: inline-block;
 	}
+	
 	.rounded {
 		display: inline-flex;
 		align-items: center;

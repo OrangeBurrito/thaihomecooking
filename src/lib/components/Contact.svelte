@@ -4,20 +4,12 @@
 
 <section class="contact flex space-between fullpage">
   <section class="main-info">
-    <div class="text">
-      <h2>Contact Me</h2>
-      <p>Contact me for more information, or to make an appointment.</p>
+    <div class="text large-text">
+      <h2 class="accent">Contact Me</h2>
+      <p class="italic">Contact me for more information, or to make an appointment.</p>
     </div>
     <div class="contact-info flex">
-      <div class="social-media">
-        <a href="https://www.facebook.com/thaihomecooking" target="_blank">
-          <Icon icon="facebook" fill={"var(--white)"} size={"var(--space-xl)"} rounded={"var(--facebook-blue)"} />
-        </a>
-        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class-Bangkok.html" target="_blank">
-          <Icon icon="tripadvisor" size={"var(--space-xl)"} rounded={"var(--tripadvisor-green)"} dark />
-        </a>
-      </div>
-      <div class="info">
+      <div class="info large-text">
         <div class="location">
           <h4>Thai Home Cooking</h4>
           <p>123 Sukhumvit Soi 12, Bangkok 12345</p>
@@ -25,14 +17,22 @@
             >Get Directions <Icon icon="open_in_new" fill="var(--link)" /></a
           >
         </div>
-        <div class="email oneline">
-          <h5 class="subheader">Email:</h5>
+        <div class="email">
+          <h5 class="subheader">Email</h5>
           <p>chef@thaihomecooking.com</p>
         </div>
-        <div class="number oneline">
-          <h5 class="subheader">Phone:</h5>
+        <div class="number">
+          <h5 class="subheader">Phone</h5>
           <p>(+66) 02 2222 2202</p>
         </div>
+      </div>
+			<div class="social-media flex">
+        <a href="https://www.facebook.com/thaihomecooking" target="_blank">
+          <Icon icon="facebook" fill={"var(--on-background)"} size={"var(--space-xl)"} />
+        </a>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class-Bangkok.html" target="_blank">
+          <Icon icon="tripadvisor" fill={"var(--on-background)"} size={"var(--space-xl)"} />
+        </a>
       </div>
     </div>
 		<!-- <a class="iframe-header" href="https://www.google.com/maps/d/u/0/viewer?mid=1mlD7YtwF_4_AZ4Eau5wRKfCAhvE" target="_blank">
@@ -59,14 +59,43 @@
 
   .main-info {
     position: relative;
-    padding: var(--space-2xl) var(--space-4xl);
+    padding: var(--space-xl) var(--space-2xl);
   }
 
   .main-info .text {
     margin-bottom: var(--space-lg);
   }
 
-  .iframe-header {
+	.contact-info {
+		flex-direction: column;
+	}
+	
+  .contact-info .subheader {
+		margin-bottom: var(--space-xxs);
+  }
+	
+  .info > * {
+		padding-bottom: var(--space-base);
+  }
+
+	.social-media {
+
+	}
+	
+  /* .social-media a {
+		display: block;
+    margin-bottom: var(--space-base);
+  }
+	 */
+  iframe {
+		position: relative;
+    flex-grow: 1;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+	.iframe-header {
     position: absolute;
 		display: flex;
 		gap: 0.5rem;
@@ -84,30 +113,8 @@
 
 	.iframe-header h4 {font-weight: normal ; font-family: 'Integral CF'}
 
-  .contact-info .oneline > * {
-    display: inline-block;
-  }
-
-  .info > * {
-    padding-bottom: var(--space-base);
-  }
-
-  .social-media a {
-    display: block;
-    margin-bottom: var(--space-base);
-  }
-
-  iframe {
-    position: relative;
-    flex-grow: 1;
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
-
   @media (max-width: 750px) {
-    .contact,
-    .contact-info {
+    .contact {
       flex-direction: column;
     }
 
@@ -125,4 +132,10 @@
       height: 300px;
     }
   }
+
+	@media screen and (min-width: 650px) {
+		.main-info {
+			padding: var(--space-2xl) var(--space-4xl);
+		}
+	}
 </style>
