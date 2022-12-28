@@ -2,7 +2,6 @@
   let showNav = false;
 
   function toggleNav() {
-    console.log("toog");
     showNav = !showNav;
   }
 </script>
@@ -14,7 +13,7 @@
   </div>
   <div class="overlay" class:show={showNav === true}>
     <nav>
-      <a href="#cta">Home</a>
+      <a href="#cta" id="selected">Home</a>
       <a href="#info">Info</a>
       <a href="#reviews">Reviews</a>
       <a href="#menu">Menu</a>
@@ -34,13 +33,13 @@
   #navbar {
     position: sticky;
     top: 0;
+		background: var(--dark-gray);
   }
 
   .bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--dark-gray);
   }
 
   .bar h2 {
@@ -82,9 +81,26 @@
     color: var(--black);
   }
 
-  @media screen and (min-width: 800px) {
-    nav {
-      flex-direction: column;
-    }
-  }
+	nav a#selected {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+	@media screen and (min-width: 600px) {
+		#navbar {
+			height: 100vh;
+		}
+
+		.overlay {
+			display: block;
+		}
+
+		.button-menu { display: none }
+
+		nav {
+			width: auto;
+			text-align: left;
+			padding-top: 0;
+		}
+	}
 </style>

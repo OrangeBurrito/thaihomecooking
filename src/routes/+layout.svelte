@@ -15,6 +15,12 @@
     /* display: flex; */
   }
 
+	@media screen and (min-width: 600px) {
+		#root {
+			display: flex;
+		}
+	}
+
   /* header { */
     /* padding: var(--space-24) var(--space-32); */
   /* } */
