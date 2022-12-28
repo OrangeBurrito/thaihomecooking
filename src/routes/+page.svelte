@@ -16,10 +16,10 @@
       </a>
     </div>
   </div>
-	<div class="banner-image">
-		<div class="overlay"></div>
-		<img src="/images/banner_image.jpg" alt="" />
-	</div>
+  <div class="banner-image">
+    <div class="overlay" />
+    <img src="/images/banner_image.jpg" alt="" />
+  </div>
 </div>
 <div id="info">
   <section>
@@ -72,14 +72,31 @@
     background-color: var(--primary);
     /* background: linear-gradient(-270deg, rgba(var(--primary-gradient),1) 0%, rgba(var(--primary-gradient),1) 45%, rgba(var(--primary-gradient),0.7) 60%, rgba(var(--primary-gradient),0) 100%),
 		url("/images/banner_image.jpg"); */
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
+		padding: 0;
   }
 
-	#cta img {
-		width: 100%;
+	.banner-image {
+		position: relative;
+		background: var(--primary-dark);
 	}
+
+	#cta .text {
+		padding: var(--space-32) var(--space-32) 0 var(--space-32);
+	}
+
+	#cta .overlay {
+		position: absolute;
+		width: 100%;
+		height: var(--space-128);
+		margin-top: -28px;
+		background: linear-gradient(180deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);
+		z-index: 1;
+	}
+
+  #cta img {
+    width: 100%;
+		opacity: 0.6;
+  }
 
   #info section {
     margin-bottom: var(--space-32);
@@ -95,29 +112,34 @@
   }
 
   @media screen and (min-width: 800px) {
+		#cta {
+			padding: 56px 128px 72px 100px;
+		}
+
     #cta .text {
       width: 65%;
-      z-index: 1;
+      z-index: 100;
+			padding: 0;
     }
 
-		#cta .banner-image {
+    .banner-image {
 			position: absolute;
-			display: flex;
-			justify-content: flex-end;
-			height: calc(100% + var(--space-16));
-		}
+      right: 0;
+      width: 50%;
+      height: calc(100% + var(--space-16));
+    }
 
-		#cta .overlay {
-			position: relative;
-			height: 100%;
-			left: 32%;
-			width: 50%;
-			background: linear-gradient(-270deg, rgba(var(--primary-gradient),1) 0%, rgba(var(--primary-gradient),1) 25%, rgba(var(--primary-gradient),0.7) 50%, rgba(var(--primary-gradient),0) 100%);
-		}
-
-    #cta img {
-			max-width: 60%;
+    #cta .overlay {
+      position: absolute;
+      width: 40%;
       height: 100%;
+			margin-top: 0;
+      background: linear-gradient(-270deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);
+    }
+
+    .banner-image img {
+      width: 100%;
+			height: 100%;
     }
 
     #info .feature {

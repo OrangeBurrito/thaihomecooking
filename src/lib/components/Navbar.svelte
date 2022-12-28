@@ -102,5 +102,11 @@
 			text-align: left;
 			padding-top: 0;
 		}
+
+		.bar {
+			padding: var(--space-24) var(--space-32);
+		}
+
+		.bar h2 { padding: 0 }
 	}
 </style>
