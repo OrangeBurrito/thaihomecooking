@@ -2,6 +2,7 @@
   import Dishes from "../lib/components/Dishes.svelte";
   import Reviews from "../lib/components/Reviews.svelte";
   import Tripadvisor from "../lib/components/Tripadvisor.svelte";
+	import menu from '$lib/menu.json'
 </script>
 
 <div id="cta" class="flex-column inverted">
@@ -55,13 +56,16 @@
     <Reviews />
   </div>
 </div>
-<div id="menu">
+<div id="menu" class="flex-gap">
   <h1 class="headline-1">Our Menu</h1>
   <div class="dishes">
-    <h2 class="headline-2">Dishes</h2>
-    <Dishes type="dish" />
+		<h2 class="headline-2">Dishes</h2>
+    <Dishes data={menu.dishes}/>
   </div>
-  <div class="desserts" />
+  <div class="desserts">
+		<h2 class="headline-2">Desserts</h2>
+		<Dishes data={menu.desserts}/>
+	</div>
 </div>
 <div id="pricing" />
 <div id="contact" />
@@ -69,16 +73,11 @@
 <style>
   #cta {
     position: relative;
-    background-color: var(--primary);
-    /* background: linear-gradient(-270deg, rgba(var(--primary-gradient),1) 0%, rgba(var(--primary-gradient),1) 45%, rgba(var(--primary-gradient),0.7) 60%, rgba(var(--primary-gradient),0) 100%),
-		url("/images/banner_image.jpg"); */
+    background: var(--primary);
 		padding: 0;
   }
 
-	.banner-image {
-		position: relative;
-		background: var(--primary-dark);
-	}
+	.banner-image { position: relative; }
 
 	#cta .text {
 		padding: var(--space-32) var(--space-32) 0 var(--space-32);
@@ -90,7 +89,7 @@
 		height: var(--space-128);
 		margin-top: -28px;
 		background: linear-gradient(180deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);
-		z-index: 1;
+		z-index: 2;
 	}
 
   #cta img {
@@ -110,6 +109,13 @@
   #reviews {
     gap: var(--space-32);
   }
+
+	#menu {
+		gap: var(--space-48);
+		padding: var(--space-64) var(--space-96) 0 var(--space-96);
+	}
+
+	#menu h2 { margin-bottom: var(--space-24)}
 
   @media screen and (min-width: 800px) {
 		#cta {

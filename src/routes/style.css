@@ -11,11 +11,10 @@
 	--dark-gray: #dbc9bd;
 	--gray-black: #3d2421;
 	--black: #1e0a0a;
-	--primary: #99A799;
-	--primary-dark: #396b53;
-	--primary-gradient: 153, 167, 153;
+	--primary: #396b53;
+	--primary-gradient: 57, 107, 83;
 
-	--link-color: var(--primary-dark);
+	--link-color: var(--primary);
 
 	--headline-text-color: var(--black);
 	--body-text-color: var(--gray-black);
@@ -28,16 +27,21 @@
 	--space-16: calc(var(--unit) * 2);
 	--space-24: calc(var(--unit) * 3);
 	--space-32: calc(var(--unit) * 4);
+	--space-40: calc(var(--unit) * 5);
+	--space-48: calc(var(--unit) * 6);
 	--space-64: calc(var(--unit) * 8);
+	--space-72: calc(var(--unit) * 9);
+	--space-96: calc(var(--unit) * 12);
 	--space-128: calc(var(--unit) * 16);
 
 	--headline-1: calc( var(--unit) * 4); /* 32 */
 	--headline-2: calc(var(--unit) * 3 + var(--unit-sm)); /* 28 */
 	--headline-3: calc(var(--unit) * 3); /* 24 */
+	--headline-4: calc(var(--unit) * 3 - var(--unit-sm)); /* 20 */
 
 	--body: 18px;
+	--body-small: 16px;
 	--body-large: calc(var(--unit) * 2 + var(--unit-sm)); /* 20px */
-	--text-body-lh: calc(var(--body) + var(--unit));
 
 	--button-large: var(--body-large);
 	--button: 18px;
@@ -56,11 +60,18 @@ body {
 p {
 	color: var(--body-text-color);
 	font-size: var(--body);
-	line-height: var(--text-body-lh);
+	line-height: calc(var(--body) + var(--unit));
 	margin-bottom: var(--space-16);
 }
 
-p.large, a.large { font-size: var(--body-large) }
+p.small, a.small {
+	font-size: var(--body-small);
+	line-height: calc(var(--body-small) + var(--unit-sm));
+}
+
+p.large, a.large {
+	font-size: var(--body-large) 
+}
 
 p.caption {
 	text-transform: uppercase;
@@ -92,7 +103,16 @@ h1, h2, h3, h4 {
 	margin-bottom: calc(var(--headline-2) / 2);
 }
 
-.headline-3 { font-size: var(--headline-3) }
+.headline-3 {
+	font-size: var(--headline-3);
+	line-height: var(--headline-3);
+}
+
+.headline-4 {
+	font-size: var(--headline-4);
+	line-height: var(--headline-4);
+	font-weight: 600;
+}
 
 button {
 	font-size: var(--button);
@@ -119,6 +139,13 @@ button {
 	display: flex;
 	gap: var(--space-32);
 	align-items: center;
+	margin-top: var(--space-40);
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--unit);
 }
 
 .inverted {
