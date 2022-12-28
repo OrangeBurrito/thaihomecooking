@@ -1,16 +1,113 @@
 * {
+	padding: 0;
   margin: 0;
 	box-sizing: border-box;
 }
 
 :root {
+	--white: #fbf1e6;
+	--gray: #f1e5d9;
+	--dark-gray: #dbc9bd;
+	--black: #3d2421;
+	--primary: lightseagreen;
+	--primary-dark: #396b53;
 
+	--unit-sm: 4px;
+	--unit: 8px;
+
+	--space-8: var(--unit);
+	--space-16: calc(var(--unit) * 2);
+	--space-24: calc(var(--unit) * 3);
+	--space-32: calc(var(--unit) * 4);
+
+	--headline-1: calc( var(--unit) * 4); /* 32 */
+	--headline-2: calc(var(--unit) * 3 + var(--unit-sm)); /* 28 */
+	--headline-3: calc(var(--unit) * 3); /* 24 */
+
+	--body: 18px;
+	--body-large: calc(var(--unit) * 2 + var(--unit-sm)); /* 20px */
+
+	--button-large: var(--body-large);
+	--button: 18px;
+
+	--headline-font: 'Literata';
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth;}
 
 body {
-	font-family: -apple-system;
+	font-family: 'Maison Neue', Helvetica, sans-serif;
+}
+
+p {
+	font-size: var(--body);
+	line-height: var(--text-body-lh);
+	margin-bottom: var(--space-16);
+}
+
+p.large { font-size: var(--body-large) }
+
+a {
+	font-size: var(--body);
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--headline-font);
+}
+
+.headline-1 {
+	font-size: var(--headline-1);
+	line-height: var(--headline-1);
+	margin-bottom: calc(var(--headline-1) / 2);
+}
+
+.headline-2 {
+	font-size: var(--headline-2);
+	line-height: var(--headline-2);
+}
+
+.headline-3 { font-size: var(--headline-3) }
+
+button {
+	font-size: var(--button);
+	cursor: pointer;
+	padding: var(--space-16) var(--space-32);
+	background: var(--gray);
+	border: none;
+}
+
+.button-large {
+	font-size: var(--button-large);
+	font-weight: 600;
+}
+
+.button-ghost {
+	font-weight: 400;
+	padding: 0;
+	background: none;
+	border-bottom: 1px solid var(--black);
+}
+
+.buttons {
+	display: flex;
+	gap: var(--space-32);
+}
+
+.inverted, .inverted .button-ghost {
+	color: var(--white);
+	border-color: var(--white);
+}
+
+main > div {
+	padding: 24px 32px 32px 32px;
+}
+
+@media screen and (min-width: 800px) {
+	:root {
+		--headline-1: calc( var(--unit) * 5); /* 40 */
+	}
+
+	main > div {
+		padding: 56px 128px 72px 100px;
+	}
 }
