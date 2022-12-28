@@ -2,7 +2,9 @@
   import Dishes from "../lib/components/Dishes.svelte";
   import Reviews from "../lib/components/Reviews.svelte";
   import Tripadvisor from "../lib/components/Tripadvisor.svelte";
+  import Price from "../lib/components/Price.svelte";
 	import menu from '$lib/menu.json'
+  import Contact from "../lib/components/Contact.svelte";
 </script>
 
 <div id="cta" class="flex-column inverted">
@@ -41,7 +43,7 @@
     </div>
     <img src="/images/students_cooking.jpg" alt="" />
   </section>
-  <section class="feature flex-column">
+  <section class="feature flex-column mb-0">
     <div class="text">
       <h2 class="headline-2">Enjoy your dish</h2>
       <p>Finish and enjoy your new Thai dishes, with recipe printouts available.</p>
@@ -56,6 +58,29 @@
     <Reviews />
   </div>
 </div>
+<div id="pricing" class="background">
+	<h2 class="headline-2">Pricing</h2>
+	<div class="prices flex-center">
+		<Price>
+			<span slot="people">1 person</span>
+			<span slot="price">฿3,000</span>
+			<span slot="per">per lesson</span>
+		</Price>
+		<Price selected>
+			<span slot="people">2-4 people</span>
+			<span slot="price">฿2,500</span>
+			<span slot="per">per person and lesson</span>
+		</Price>
+		<Price>
+			<span slot="people">5-6 people</span>
+			<span slot="price">฿2,000</span>
+			<span slot="per">per person and lesson</span>
+		</Price>
+	</div>
+	<a href="#contact">
+		<button class="button-ghost">Contact me for more information below ↓</button>
+	</a>
+</div>
 <div id="menu" class="flex-gap">
   <h1 class="headline-1">Our Menu</h1>
   <div class="dishes">
@@ -67,8 +92,13 @@
 		<Dishes data={menu.desserts}/>
 	</div>
 </div>
-<div id="pricing" />
-<div id="contact" />
+
+<Contact/>
+
+<footer>
+	<p class="mb-0">@ Angsana Andersson 2023</p>
+	<p class="mb-0">Designed and built by <a href="https://orangeburrito.com" target="_blank">OrangeBurrito</a></p>
+</footer>
 
 <style>
   #cta {
@@ -110,12 +140,33 @@
     gap: var(--space-32);
   }
 
+	#pricing {
+		text-align: center;
+		padding-top: var(--space-32);
+	 }
+
+	#pricing .prices {
+		flex-direction: row;
+		align-items: flex-start;
+		margin: var(--space-48) 0;
+	}
+
 	#menu {
 		gap: var(--space-48);
-		padding: var(--space-64) var(--space-96) 0 var(--space-96);
 	}
 
 	#menu h2 { margin-bottom: var(--space-24)}
+
+	footer {
+		background: var(--dark-gray);
+		padding: var(--space-24) var(--space-32);
+	}
+
+	footer a {
+		color: var(--black);
+		text-decoration: underline;
+		font-weight: 600;
+	}
 
   @media screen and (min-width: 800px) {
 		#cta {
@@ -124,7 +175,7 @@
 
     #cta .text {
       width: 65%;
-      z-index: 100;
+      z-index: 3;
 			padding: 0;
     }
 
@@ -168,5 +219,9 @@
       max-width: 45%;
       height: 250px;
     }
+
+		footer {
+			padding: var(--space-32) calc(var(--space-96) + var(--unit-sm));
+		}
   }
 </style>

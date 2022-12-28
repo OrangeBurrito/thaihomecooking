@@ -9,10 +9,9 @@
     <slot />
   </main>
 </div>
-
 <style>
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: 800px) {
 		#root {
 			display: flex;
 		}

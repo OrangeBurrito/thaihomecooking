@@ -13,9 +13,15 @@
 	.tripadvisor {
 		height: fit-content;
 	}
-	
+
 	.stars {
 		color: #34E0A1;
 		margin-bottom: var(--space-16);
+	}
+
+	a {
+		color: inherit;
+		opacity: 0.6;
+		text-decoration: underline;
 	}
 </style>

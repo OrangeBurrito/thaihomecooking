@@ -25,6 +25,7 @@
 
 	--space-8: var(--unit);
 	--space-16: calc(var(--unit) * 2);
+	--space-20: calc(var(--unit) * 2 + var(--unit-sm));
 	--space-24: calc(var(--unit) * 3);
 	--space-32: calc(var(--unit) * 4);
 	--space-40: calc(var(--unit) * 5);
@@ -78,8 +79,14 @@ p.caption {
 	font-weight: 500;
 }
 
+span {
+	font-size: inherit;
+	line-height: inherit;
+}
+
 a {
 	font-size: var(--body);
+	text-decoration: none;
 }
 
 img {
@@ -106,11 +113,13 @@ h1, h2, h3, h4 {
 .headline-3 {
 	font-size: var(--headline-3);
 	line-height: var(--headline-3);
+	margin-bottom: calc(var(--headline-3) / 2);
 }
 
 .headline-4 {
 	font-size: var(--headline-4);
 	line-height: var(--headline-4);
+	margin-bottom: calc(var(--headline-4) / 2);
 	font-weight: 600;
 }
 
@@ -137,7 +146,8 @@ button {
 
 .buttons {
 	display: flex;
-	gap: var(--space-32);
+	flex-direction: column;
+	gap: var(--space-16);
 	align-items: center;
 	margin-top: var(--space-40);
 }
@@ -163,6 +173,7 @@ button {
 	justify-content: center;
 }
 
+
 .flex-column {
 	display: flex;
 	flex-direction: column;
@@ -176,7 +187,7 @@ button {
 }
 
 .mb-0 {
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 main > div {
@@ -202,5 +213,10 @@ svg {
 		justify-content: space-between;
 		align-items: center;
 		gap: var(--space-64);
+	}
+
+	.buttons {
+		flex-direction: row;
+		gap: var(--space-32);
 	}
 }

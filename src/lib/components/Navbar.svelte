@@ -4,20 +4,30 @@
   function toggleNav() {
     showNav = !showNav;
   }
+
+	function toggleActive(e) {
+		if (e.target.tagName === 'A') {
+			document.querySelector('.active').classList.remove('active')
+			e.target.classList.add('active')
+			showNav = false
+		}
+	}
 </script>
 
 <div id="navbar">
   <div class="bar">
-    <h2 class="headline-2">Thai Home Cooking</h2>
+		<a href="/">
+			<h2 class="headline-2">Thai Home Cooking</h2>
+		</a>
     <button class="button-menu" on:click={toggleNav}>☰</button>
   </div>
-  <div class="overlay" class:show={showNav === true}>
+  <div class="overlay" class:show={showNav === true} on:click={e=>toggleActive(e)}>
     <nav>
-      <a href="#cta" id="selected">Home</a>
+      <a href="#cta" class="active">Home</a>
       <a href="#info">Info</a>
       <a href="#reviews">Reviews</a>
-      <a href="#menu">Menu</a>
       <a href="#pricing">Pricing</a>
+      <a href="#menu">Menu</a>
       <a href="#contact">Contact Me</a>
     </nav>
   </div>
@@ -34,6 +44,7 @@
     position: sticky;
     top: 0;
 		background: var(--dark-gray);
+		z-index: 4;
   }
 
   .bar {
@@ -53,7 +64,6 @@
 
   .overlay {
     display: none;
-    z-index: 100;
   }
 
   .overlay.show {
@@ -81,14 +91,15 @@
     color: var(--black);
   }
 
-	nav a#selected {
+	nav a.active {
 		text-decoration: underline;
 		font-weight: bold;
 	}
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: 800px) {
 		#navbar {
 			height: 100vh;
+			padding: var(--space-32) var(--space-48) var(--space-32) var(--space-32);
 		}
 
 		.overlay {
@@ -100,13 +111,13 @@
 		nav {
 			width: auto;
 			text-align: left;
-			padding-top: 0;
+			gap: var(--space-20);
+			padding: 0;
 		}
 
-		.bar {
-			padding: var(--space-24) var(--space-32);
+		.bar h2 {
+			padding: 0;
+			margin-bottom: var(--space-40);
 		}
-
-		.bar h2 { padding: 0 }
 	}
 </style>
