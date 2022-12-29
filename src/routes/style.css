@@ -283,9 +283,9 @@ button {
 	gap: var(--space-32);
 }
 
-.mb-0 {
-	margin-bottom: 0 !important;
-}
+.mb-0 {margin-bottom: 0 !important;}
+
+.mb-s { margin-bottom: var(--unit-sm) !important}
 
 main > div {
 	padding: 24px 32px 32px 32px;

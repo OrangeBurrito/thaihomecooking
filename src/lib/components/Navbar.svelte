@@ -96,7 +96,7 @@
 		font-weight: bold;
 	}
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: 1000px) {
 		#navbar {
 			height: 100vh;
 			padding: var(--space-32) var(--space-48) var(--space-32) var(--space-32);

@@ -3,8 +3,10 @@
   import Reviews from "../lib/components/Reviews.svelte";
   import Tripadvisor from "../lib/components/Tripadvisor.svelte";
   import Price from "../lib/components/Price.svelte";
-	import menu from '$lib/menu.json'
   import Contact from "../lib/components/Contact.svelte";
+
+	import menu from '$lib/menu.json'
+	import blogposts from '$lib/blogposts.json'
 </script>
 
 <div id="cta" class="flex-column inverted">
@@ -34,14 +36,14 @@
       <h2 class="headline-2">Visit the market</h2>
       <p>For optional morning lessons, meet up with me at the local market to pick out fresh ingredients for your dishes.</p>
     </div>
-    <img src="/images/market_visit.jpg" alt="" />
+    <img src="/images/market_visit.jpeg" alt="" />
   </section>
   <section class="feature flex-column reverse">
     <div class="text">
       <h2 class="headline-2">Prepare your dishes</h2>
       <p>In my Thai kitchen, learn to prepare and cook the dishes of your choosing with the ingredients picked earlier.</p>
     </div>
-    <img src="/images/students_cooking.jpg" alt="" />
+    <img src="/images/students_cooking.jpeg" alt="" />
   </section>
   <section class="feature flex-column mb-0">
     <div class="text">
@@ -53,10 +55,8 @@
 </div>
 <div id="reviews" class="flex-center background">
   <h2 class="headline-2">Reviews from Students</h2>
-  <div class="flex-column">
-    <Tripadvisor />
-    <Reviews />
-  </div>
+	<Tripadvisor />
+	<Reviews {blogposts}/>
 </div>
 <div id="pricing" class="background">
 	<h2 class="headline-2">Pricing</h2>
@@ -134,10 +134,11 @@
   #info img {
     object-fit: cover;
     width: 100%;
+		height: 200px;
   }
 
   #reviews {
-    gap: var(--space-32);
+		gap: var(--space-32);
   }
 
 	#pricing {
@@ -182,13 +183,13 @@
     .banner-image {
 			position: absolute;
       right: 0;
-      width: 50%;
+      width: 70%;
       height: calc(100% + var(--space-16));
     }
 
     #cta .overlay {
       position: absolute;
-      width: 40%;
+      width: 60%;
       height: 100%;
 			margin-top: 0;
       background: linear-gradient(-270deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);

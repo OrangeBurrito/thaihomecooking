@@ -11,7 +11,7 @@
 </div>
 <style>
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: 1000px) {
 		#root {
 			display: flex;
 		}
