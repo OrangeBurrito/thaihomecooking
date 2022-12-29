@@ -147,7 +147,9 @@
 	--body-font: 'Maison Neue', Helvetica, sans-serif;
 }
 
-html { scroll-behavior: smooth;}
+html, body { overflow-x: clip; }
+
+html { scroll-behavior: smooth; }
 
 body {
 	font-family: var(--body-font);
@@ -294,6 +296,34 @@ main > div {
 svg {
 	max-width: 200px;
 	height: 100%;
+}
+
+.accent {
+	color: var(--primary);
+}
+
+.slide-in-link {
+	display: inline-block;
+  position: relative;
+}
+
+.slide-in-link::after {
+	content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.slide-in:hover .slide-in-link::after,
+.slide-in:focus .slide-in-link::after,
+.slide-in:active .slide-in-link::after {
+	transform: scaleX(1);
 }
 
 @media screen and (min-width: 800px) {

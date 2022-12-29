@@ -18,7 +18,7 @@
 		<h2 class="headline-2">All Reviews</h2>
 		<div class="links">
 			{#each blogposts.all as post}
-				<a class="card small-card" href={post.url}>
+				<a class="card small-card" href={post.url} target="_blank">
 					<h4 class="headline-4 title">{post.title}</h4>
 					<div>
 						<h4 class="headline-4 blog-name mb-s">{post.blogName}</h4>
@@ -117,7 +117,7 @@
 
   @media screen and (min-width: 1200px) {
     .main-reviews,
-    .all-reviews .links2 {
+    .all-reviews .links {
       grid-template-columns: 1fr 1fr;
     }
   }

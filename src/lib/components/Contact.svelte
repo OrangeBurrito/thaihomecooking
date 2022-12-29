@@ -1,25 +1,30 @@
 <div id="contact" class="flex-column background">
   <div class="text">
     <div class="text">
-      <h2 class="headline-2">Contact Me</h2>
+      <h2 class="headline-2 accent">Contact Me</h2>
       <p>Contact me for more information, or to make an appointment.</p>
     </div>
     <div class="contact-info">
-      <div class="address">
-        <h2 class="headline-2 mb-0">Thai Home Cooking</h2>
-        <h2 class="headline-2">123 Sukhumvit Soi 12, Bangkok, TH 12345</h2>
-      </div>
+			<a href="https://goo.gl/maps/ZyBoLTqpojBYCkf88" target="_blank">
+				<div class="address slide-in">
+					<h2 class="headline-2 slide-in-link mb-0">Thai Home Cooking</h2>
+					<h2 class="headline-2 slide-in-link mb-0">364 Sukhumvit Soi 79, Bangkok,</h2>
+					<br>
+					<h2 class="headline-2 slide-in-link">TH 10260</h2>
+				</div>
+			</a>
       <hr />
       <div class="personal">
         <p>Angsana</p>
-        <p>(+66) 022 252 2202</p>
+        <p>(+66) 081 455 5808</p>
         <p>angsana@thaihomecooking.com</p>
+        <p>angsana.andersson@gmail.com</p>
       </div>
       <hr />
       <div class="socials">
-        <a href=""><button class="button-ghost">Facebook</button></a>
-        <a href=""><button class="button-ghost">Instagram</button></a>
-        <a href=""><button class="button-ghost">Tripadvisor</button></a>
+        <a href="https://www.facebook.com/thaihomecooking" target="_blank"><button class="button-ghost">Facebook</button></a>
+        <a href="https://www.instagram.com/chef.angsana/" target="_blank"><button class="button-ghost">Instagram</button></a>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class_since_2004-Bangkok.html" target="_blank"><button class="button-ghost">Tripadvisor</button></a>
       </div>
     </div>
   </div>
@@ -53,7 +58,7 @@
     font-weight: 600;
   }
 
-  .address h2.mb-0 {
+  .address h2:first-of-type {
     font-weight: 500;
     opacity: 0.8;
   }
@@ -65,6 +70,11 @@
   .personal p:first-child {
     font-weight: 600;
   }
+
+	.socials {
+		display: flex;
+		gap: var(--space-16);
+	}
 
   .socials button {
     font-weight: 500;
