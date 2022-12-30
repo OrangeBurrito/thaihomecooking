@@ -1,5 +1,4 @@
 <script>
-	import { fade} from 'svelte/transition'
   let showNav = false;
 
   function toggleNav() {
@@ -26,7 +25,7 @@
 			<div class="three"/>
 	</button>
   </div>
-  <div class="overlay" transition:fade class:show={showNav === true} on:click={e=>toggleActive(e)}>
+  <div class="overlay" class:show={showNav === true} on:click={e=>toggleActive(e)}>
     <nav>
       <a href="#cta" class="active">Home</a>
       <a href="#info">Info</a>
@@ -134,6 +133,10 @@
 			background: var(--dark-gray);
 		}
 
+		:global(#navbar.show + main) {
+			margin-top: 0;
+		}
+
 		.overlay, .overlay.show {
 			position: fixed;
 			display: block;
@@ -143,13 +146,16 @@
 
 		.hamburger-menu { display: none }
 
-		.overlay { opacity: 1 }
+		.overlay {
+			opacity: 1;
+		}
 
 		nav {
 			left: 0 !important;
 			text-align: left;
 			gap: var(--space-20);
 			padding: 0;
+			width: auto;
 		}
 
 		.bar h2 {
