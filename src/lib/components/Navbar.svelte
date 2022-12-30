@@ -1,4 +1,5 @@
 <script>
+	import { fade} from 'svelte/transition'
   let showNav = false;
 
   function toggleNav() {
@@ -14,7 +15,7 @@
 	}
 </script>
 
-<div id="navbar">
+<div id="navbar" class:show={showNav}>
   <div class="bar">
 		<a href="/">
 			<h2 class="headline-2 mb-0">Thai Home Cooking</h2>
@@ -25,7 +26,7 @@
 			<div class="three"/>
 	</button>
   </div>
-  <div class="overlay" class:show={showNav === true} on:click={e=>toggleActive(e)}>
+  <div class="overlay" transition:fade class:show={showNav === true} on:click={e=>toggleActive(e)}>
     <nav>
       <a href="#cta" class="active">Home</a>
       <a href="#info">Info</a>
@@ -47,14 +48,18 @@
   #navbar {
     position: sticky;
     top: 0;
-		background: var(--dark-gray);
 		z-index: 4;
   }
-
+	
+	:global(#navbar.show + main) {
+		margin-top: -100vh;
+	}
+	
   .bar {
-    display: flex;
+		display: flex;
     justify-content: space-between;
     align-items: center;
+		background: var(--dark-gray);
   }
 
   .bar h2 {
@@ -80,28 +85,37 @@
 	.open .three {transform: rotate(45deg) translate(-8px, -6px); }
 	
   .overlay {
-    display: none;
+		position: sticky;
+    opacity: 0;
   }
 
   .overlay.show {
-    display: flex;
+		display: flex;
     justify-content: flex-end;
-    position: fixed;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
+		opacity: 1;
+		transition: all .2s;
   }
 
   nav {
-    text-align: right;
     display: flex;
     flex-direction: column;
+		position: absolute;
+		left: 100vw;
     width: 80vw;
     height: 100%;
+    text-align: right;
     gap: var(--space-16);
     background: var(--dark-gray);
     padding: var(--space-32);
+		transition: .2s ease-in;
   }
+	
+	.overlay.show nav {
+		left: 20vw;
+	}
 
   nav a {
     text-decoration: none;
@@ -117,16 +131,22 @@
 		#navbar {
 			height: 100vh;
 			padding: var(--space-32) var(--space-48) var(--space-32) var(--space-32);
+			background: var(--dark-gray);
 		}
 
-		.overlay {
+		.overlay, .overlay.show {
+			position: fixed;
 			display: block;
+			width: fit-content;
+			background: none;
 		}
 
 		.hamburger-menu { display: none }
 
+		.overlay { opacity: 1 }
+
 		nav {
-			width: auto;
+			left: 0 !important;
 			text-align: left;
 			gap: var(--space-20);
 			padding: 0;
