@@ -17,9 +17,13 @@
 <div id="navbar">
   <div class="bar">
 		<a href="/">
-			<h2 class="headline-2">Thai Home Cooking</h2>
+			<h2 class="headline-2 mb-0">Thai Home Cooking</h2>
 		</a>
-    <button class="button-menu" on:click={toggleNav}>☰</button>
+    <button class="hamburger-menu" on:click={toggleNav} class:open={showNav}>
+			<div class="one"/>
+			<div class="two"/>
+			<div class="three"/>
+	</button>
   </div>
   <div class="overlay" class:show={showNav === true} on:click={e=>toggleActive(e)}>
     <nav>
@@ -57,11 +61,24 @@
     padding: var(--space-16);
   }
 
-  .button-menu {
-    font-size: var(--headline-1);
-    padding: var(--space-8) var(--space-16);
-  }
+	.hamburger-menu {
+		background: none;
+		padding: 0 var(--space-16) 0 0;
+	}
 
+	.one, .two, .three {
+		width: var(--space-32);
+		height: var(--unit-sm);
+		background: var(--headline-text-color);
+		margin: 6px 0;
+		border-radius: 1.3px;
+		transition: 0.4s ease;
+	}
+
+	.open .one { transform: rotate(-45deg) translate(-8px, 6px); }
+	.open .two { opacity: 0;}
+	.open .three {transform: rotate(45deg) translate(-8px, -6px); }
+	
   .overlay {
     display: none;
   }
@@ -106,7 +123,7 @@
 			display: block;
 		}
 
-		.button-menu { display: none }
+		.hamburger-menu { display: none }
 
 		nav {
 			width: auto;
@@ -117,7 +134,7 @@
 
 		.bar h2 {
 			padding: 0;
-			margin-bottom: var(--space-40);
+			margin-bottom: var(--space-40) !important;
 		}
 	}
 </style>
