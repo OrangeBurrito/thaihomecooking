@@ -12,7 +12,7 @@
   </div>
   <div class="banner-image">
     <div class="overlay" />
-    <img src="/images/banner_image.jpg" alt="" />
+    <img src="/images/banner_image.png" alt="" />
   </div>
 </div>
 
@@ -20,7 +20,6 @@
 	#hero {
     position: relative;
     background: var(--primary);
-		background: url('/images/elephant_painting.png');
 		background-size: contain;
 		padding: 0;
   }
@@ -65,7 +64,7 @@
 
     #hero .overlay {
       position: absolute;
-      width: 60%;
+      width: 70%;
       height: 100%;
 			margin-top: 0;
       background: linear-gradient(-270deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);

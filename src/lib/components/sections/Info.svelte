@@ -8,21 +8,21 @@
       <h2 class="headline-2">Visit the market</h2>
       <p>For optional morning lessons, meet up with me at the local market to pick out fresh ingredients for your dishes.</p>
     </div>
-    <img src="/images/market_visit.jpeg" alt="" loading="lazy"/>
+    <img src="/images/info/market_visit.jpg" alt="picking out ingredients at the local market" loading="lazy"/>
   </section>
   <section class="feature flex-column reverse">
     <div class="text">
       <h2 class="headline-2">Prepare your dishes</h2>
       <p>In my Thai kitchen, learn to prepare and cook the dishes of your choosing with the ingredients picked earlier.</p>
     </div>
-    <img src="/images/students_cooking.jpeg" alt="" loading="lazy"/>
+    <img src="/images/info/preparing_food.jpg" alt="teaching a student how to make khao tom mat" loading="lazy"/>
   </section>
   <section class="feature flex-column mb-0">
     <div class="text">
       <h2 class="headline-2">Enjoy your dish</h2>
       <p>Finish and enjoy your new Thai dishes, with recipe printouts available.</p>
     </div>
-    <img src="" alt="" loading="lazy"/>
+    <img src="/images/info/finished_food.jpg" alt="me, the students and my grandmother standing next to completed thai dishes" loading="lazy"/>
   </section>
 </div>
 
@@ -56,7 +56,7 @@
 
     #info img {
       max-width: 45%;
-      height: 250px;
+      height: 300px;
     }
 	}
 </style>
