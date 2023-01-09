@@ -1,17 +1,15 @@
 <script>
-  export let selected = '';
+	export let highlighted = false
+  export let people = '';
+  export let price = '';
+	export let per = ''
+
 </script>
 
-<div class="price" class:selected>
-	<h3 class="headline-3">
-		<slot name="people"/>
-	</h3>
-	<h2 class="headline-2 mb-0">
-		<slot name="price"/>
-	</h2>
-  <p class="mb-0">
-    <slot name="per"/>
-  </p>
+<div class="price" class:highlighted>
+	<h3 class="headline-3">{people}</h3>
+	<h2 class="headline-2 mb-0">{price}</h2>
+  <p class="mb-0">{per}</p>
 </div>
 
 <style>
@@ -19,7 +17,7 @@
     padding: var(--space-8) var(--space-16);
   }
 
-  .selected {
+  .highlighted {
     border: 2px solid var(--border-color);
   }
 

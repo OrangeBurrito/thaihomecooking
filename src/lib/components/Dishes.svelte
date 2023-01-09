@@ -5,7 +5,7 @@
 <div class="dishes">
   {#each data as dish}
     <div class="dish">
-      <img src="" alt=""/> 
+      <img src="" alt="" loading="lazy"/> 
       <div class="text">
         <h4 class="headline-4 mb-0">{dish.name}</h4>
         <p class="small mb-0">{dish.description}</p>

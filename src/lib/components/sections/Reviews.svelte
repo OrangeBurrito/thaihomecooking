@@ -1,47 +1,58 @@
 <script>
+  import Tripadvisor from "$lib/components/Tripadvisor.svelte";
+
+	
   export let blogposts = {};
 </script>
 
-<div class="reviews-wrap flex-gap">
-  <div class="main-reviews">
-    {#each blogposts.main as post}
-      <div class="card flex-gap">
-        <p class="snippet large">{@html post.snippet}</p>
-        <a class="text" href={post.url} target="_blank">
-          <p class="blog-name large mb-0">{post.blogName}</p>
-          <a class="blog-link" href={post.url} target="_blank">Read More ⇒</a>
-        </a>
+<div id="reviews" class="flex-center background">
+  <h2 class="headline-2">Reviews from Students</h2>
+	<Tripadvisor/>
+  <div class="reviews-wrap flex-gap">
+    <div class="main-reviews">
+      {#each blogposts.main as post}
+        <div class="card flex-gap">
+          <p class="snippet large">{@html post.snippet}</p>
+          <a class="text" href={post.url}>
+            <p class="blog-name large mb-0">{post.blogName}</p>
+            <a class="blog-link" href={post.url}>Read More ⇒</a>
+          </a>
+        </div>
+      {/each}
+    </div>
+    <div class="all-reviews">
+      <h2 class="headline-2">All Reviews</h2>
+      <div class="links">
+        {#each blogposts.all as post}
+          <a class="card small-card" href={post.url}>
+            <h4 class="headline-4 title">{post.title}</h4>
+            <div>
+              <h4 class="headline-4 blog-name mb-s">{post.blogName}</h4>
+              <a class="blog-link" href={post.url}>Read More ⇒</a>
+            </div>
+          </a>
+        {/each}
       </div>
-    {/each}
-  </div>
-  <div class="all-reviews">
-		<h2 class="headline-2">All Reviews</h2>
-		<div class="links">
-			{#each blogposts.all as post}
-				<a class="card small-card" href={post.url} target="_blank">
-					<h4 class="headline-4 title">{post.title}</h4>
-					<div>
-						<h4 class="headline-4 blog-name mb-s">{post.blogName}</h4>
-						<a class="blog-link" href={post.url} target="_blank">Read More ⇒</a>
-					</div>
-				</a>
-			{/each}
-		</div>
+    </div>
   </div>
 </div>
 
 <style>
-	.reviews-wrap {
-		align-items: flex-start;
-	}
+	#reviews {
+		gap: var(--space-32);
+  }
+
+  .reviews-wrap {
+    align-items: flex-start;
+  }
   .main-reviews {
     display: grid;
     gap: var(--space-32);
   }
 
-	.all-reviews h2 {
-		margin-bottom: var(--space-24);
-	}
+  .all-reviews h2 {
+    margin-bottom: var(--space-24);
+  }
 
   .all-reviews .links {
     display: grid;

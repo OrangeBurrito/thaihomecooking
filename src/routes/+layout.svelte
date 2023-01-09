@@ -1,5 +1,6 @@
 <script>
-  import Navbar from "../lib/components/Navbar.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
+  import Footer from "../lib/components/Footer.svelte";
   import "./style.css";
 </script>
 
@@ -12,18 +13,16 @@
 <div id="root">
 	<Navbar />
 	<main>
-    <slot />
+    <slot/>
+		<Footer/>
   </main>
 </div>
-<style>
 
+
+<style>
 	@media screen and (min-width: 1000px) {
 		#root {
 			display: flex;
 		}
 	}
-
-  /* header { */
-    /* padding: var(--space-24) var(--space-32); */
-  /* } */
 </style>

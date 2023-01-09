@@ -5,7 +5,7 @@
       <p>Contact me for more information, or to make an appointment.</p>
     </div>
     <div class="contact-info">
-			<a href="https://goo.gl/maps/ZyBoLTqpojBYCkf88" target="_blank">
+			<a href="https://goo.gl/maps/ZyBoLTqpojBYCkf88">
 				<div class="address slide-in">
 					<h2 class="headline-2 slide-in-link mb-0">Thai Home Cooking</h2>
 					<h2 class="headline-2 slide-in-link mb-0">364 Sukhumvit Soi 79, Bangkok,</h2>
@@ -22,9 +22,9 @@
       </div>
       <hr />
       <div class="socials">
-        <a href="https://www.facebook.com/thaihomecooking" target="_blank"><button class="button-ghost">Facebook</button></a>
-        <a href="https://www.instagram.com/chef.angsana/" target="_blank"><button class="button-ghost">Instagram</button></a>
-        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class_since_2004-Bangkok.html" target="_blank"><button class="button-ghost">Tripadvisor</button></a>
+        <a href="https://www.facebook.com/thaihomecooking"><button class="button-ghost">Facebook</button></a>
+        <a href="https://www.instagram.com/chef.angsana/"><button class="button-ghost">Instagram</button></a>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class_since_2004-Bangkok.html"><button class="button-ghost">Tripadvisor</button></a>
       </div>
     </div>
   </div>

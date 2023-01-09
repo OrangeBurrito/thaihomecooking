@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'Literata';
-	src: url('/fonts/literata/Literata-Italic-VariableFont_opsz,wght') format('woff2-variations');
+	src: url('/fonts/literata/Literata-Italic-VariableFont_opsz,wght.woff2') format('woff2-variations');
 	font-weight: 1 999;
 	font-style: italic;
 	font-display: swap;
