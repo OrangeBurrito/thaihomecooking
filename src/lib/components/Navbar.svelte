@@ -27,7 +27,7 @@
   </div>
   <div class="overlay" class:show={showNav === true} on:click={e=>toggleActive(e)}>
     <nav>
-      <a href="#cta" class="active">Home</a>
+      <a href="#hero" class="active">Home</a>
       <a href="#info">Info</a>
       <a href="#reviews">Reviews</a>
       <a href="#pricing">Pricing</a>
