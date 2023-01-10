@@ -1,18 +1,21 @@
+<script>
+  import Image from "$lib/components/Image.svelte";
+  import Button from "$lib/components/Button.svelte";
+</script>
+
 <div id="hero" class="flex-column inverted">
   <div class="text">
     <h1 class="headline-1">Learn how to cook Thai Cuisine in my home kitchen</h1>
     <p class="large">Learn how to make authentic Thai dishes in my home kitchen in Bangkok with private cooking lessons in English or Thai.</p>
     <p class="large">You choose your dishes from my family cookbook containing 100+ recipes gathered over three generations.</p>
     <div class="buttons">
-      <button class="button-large">Sign Up for a Class</button>
-      <a href="#info">
-        <button class="button-large button-ghost">Let me see it first ⇒</button>
-      </a>
+			<Button primary text="Sign up for a Class" large/>
+			<Button ghost href="#info" text="Let me see it first ⇒" large/>
     </div>
   </div>
   <div class="banner-image">
     <div class="overlay" />
-    <img src="/images/banner_image.png" alt="" />
+		<Image src="/images/banner_image.png"/>
   </div>
 </div>
 
@@ -24,7 +27,10 @@
 		padding: 0;
   }
 
-	.banner-image { position: relative; }
+	.banner-image {
+		position: relative;
+		opacity: 0.6;
+	}
 
 	#hero .text {
 		padding: var(--space-32) var(--space-32) 0 var(--space-32);
@@ -38,11 +44,6 @@
 		background: linear-gradient(180deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);
 		z-index: 2;
 	}
-
-  #hero img {
-    width: 100%;
-		opacity: 0.6;
-  }
 
 	@media screen and (min-width: 800px) {
 		#hero {

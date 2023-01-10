@@ -222,27 +222,6 @@ h1, h2, h3, h4 {
 	font-weight: 600;
 }
 
-button {
-	font-size: var(--button);
-	cursor: pointer;
-	padding: var(--space-16) var(--space-32);
-	background: var(--gray);
-	border: none;
-}
-
-.button-large {
-	font-size: var(--button-large);
-	font-weight: 600;
-}
-
-.button-ghost {
-	font-weight: 400;
-	padding: 0;
-	color: var(--body-text-color);
-	background: none;
-	border-bottom: 1px solid var(--border-color);
-}
-
 .buttons {
 	display: flex;
 	flex-direction: column;

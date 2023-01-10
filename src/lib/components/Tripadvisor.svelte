@@ -1,12 +1,13 @@
 <script>
 	import InlineSVG from 'svelte-inline-svg'
+  import Link from './Link.svelte';
 </script>
 
 <div class="tripadvisor flex-center">
 	<p class="caption mb-0">Rated 5/5 Stars on</p>
 	<InlineSVG src={'/images/tripadvisor_banner.svg'}/>
 	<h1 class="stars headline-1">★★★★★</h1>
-	<a href="">176 reviews</a>
+	<Link href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class_since_2004-Bangkok.html" text="176 reviews"/>
 </div>
 
 <style>

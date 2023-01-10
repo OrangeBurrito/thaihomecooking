@@ -1,3 +1,7 @@
+<script>
+  import Button from "$lib/components/Button.svelte";
+
+</script>
 <div id="contact" class="flex-column background">
   <div class="text">
     <div class="text">
@@ -22,9 +26,9 @@
       </div>
       <hr />
       <div class="socials">
-        <a href="https://www.facebook.com/thaihomecooking"><button class="button-ghost">Facebook</button></a>
-        <a href="https://www.instagram.com/chef.angsana/"><button class="button-ghost">Instagram</button></a>
-        <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class_since_2004-Bangkok.html"><button class="button-ghost">Tripadvisor</button></a>
+				<Button ghost href="https://www.facebook.com/thaihomecooking" text="Facebook"/>
+				<Button ghost href="https://www.instagram.com/chef.angsana/" text="Instagram"/>
+				<Button ghost href="https://www.tripadvisor.com/Attraction_Review-g293916-d1997519-Reviews-Thai_Home_Cooking_Class_since_2004-Bangkok.html" text="TripAdvisor"/>
       </div>
     </div>
   </div>

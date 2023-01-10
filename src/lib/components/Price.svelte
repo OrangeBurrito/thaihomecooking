@@ -3,7 +3,6 @@
   export let people = '';
   export let price = '';
 	export let per = ''
-
 </script>
 
 <div class="price" class:highlighted>

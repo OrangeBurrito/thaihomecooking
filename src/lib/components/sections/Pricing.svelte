@@ -1,5 +1,6 @@
 <script>
   import Price from "$lib/components/Price.svelte";
+  import Button from "$lib/components/Button.svelte";
 
 </script>
 <div id="pricing" class="background">
@@ -9,9 +10,7 @@
 		<Price people="2-4 people" price="฿3,500" per="per person and lesson" highlighted/>
 		<Price people="5-6 people" price="฿3,000" per="per person and lesson"/>
 	</div>
-	<a href="#contact">
-		<button class="button-ghost">Contact me for more information below ↓</button>
-	</a>
+	<Button ghost href="#contact" text="Contact me for more information below ↓"/>
 </div>
 
 <style>

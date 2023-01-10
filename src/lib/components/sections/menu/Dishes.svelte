@@ -1,11 +1,14 @@
 <script>
+  import Image from "$lib/components/Image.svelte";
+
+
   export let data = {};
 </script>
 
 <div class="dishes">
   {#each data as dish}
     <div class="dish">
-      <img src={dish.photo} alt={dish.description} loading="lazy"/> 
+			<Image src={dish.photo} alt={dish.description} height="var(--img-height)"/>
       <div class="text">
         <h4 class="headline-4 mb-0">{dish.name}</h4>
         <p class="small mb-0">{dish.description}</p>
@@ -19,22 +22,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-16);
+
+		--img-height: var(--space-128);
   }
 
-  .dish img {
-    width: 100%;
-    height: var(--space-128);
-    background: var(--gray);
-    margin-bottom: var(--space-8);
-  }
+	.text {
+		margin-top: var(--space-8);
+	}
 
   @media screen and (min-width: 600px) {
     .dishes {
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    .dish img {
-      height: calc(var(--space-128) + var(--space-24));
+			--img-height: calc(var(--space-128) + var(--space-24));
     }
   }
 

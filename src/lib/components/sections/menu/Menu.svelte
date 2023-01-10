@@ -1,11 +1,11 @@
 <script>
-	import Dishes from "$lib/components/Dishes.svelte";
+	import Dishes from "$lib/components/sections/menu/Dishes.svelte";
 
 	export let menu = {}
 </script>
 
 <div id="menu" class="flex-gap">
-  <h1 class="headline-1">Our Menu</h1>
+  <h1 class="headline-1 accent">Our Menu</h1>
   <div class="dishes">
 		<h2 class="headline-2">Dishes</h2>
     <Dishes data={menu.dishes}/>
