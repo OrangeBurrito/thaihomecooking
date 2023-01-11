@@ -19,7 +19,7 @@
 			<h2 class="headline-2">Prepare your dishes</h2>
       <p>In my Thai kitchen, learn to prepare and cook the dishes of your choosing with the ingredients picked earlier.</p>
     </div>
-		<Image src="/images/info/preparing_food.jpg" alt="teaching a student how to make khao tom mat" width="var(--img-width)" height="var(--img-height)"/>
+		<Image src="/images/info/preparing_food.png" alt="teaching a student how to prepare a dish" width="var(--img-width)" height="var(--img-height)"/>
   </section>
   <section class="feature flex-column mb-0">
     <div class="text">
