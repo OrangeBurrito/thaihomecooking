@@ -1,0 +1,8 @@
+[
+	{ "href": "#hero", "text": "Home", "active": true },
+	{ "href": "#info", "text": "Info", "active": false },
+	{ "href": "#reviews", "text": "Reviews", "active": false },
+	{ "href": "#pricing", "text": "Pricing", "active": false },
+	{ "href": "#menu", "text": "Menu", "active": false },
+	{ "href": "#contact", "text": "Contact Me", "active": false }
+]

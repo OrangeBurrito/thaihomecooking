@@ -1,7 +1,9 @@
 <script>
   import Navbar from "$lib/components/layout/Navbar.svelte";
   import Footer from "$lib/components/layout/Footer.svelte";
+
   import "./style.css";
+	import navLinks from "$lib/nav.json";
 </script>
 
 <svelte:head>
@@ -11,7 +13,7 @@
 </svelte:head>
 
 <div id="root">
-	<Navbar />
+	<Navbar {navLinks}/>
 	<main>
     <slot/>
 		<Footer/>

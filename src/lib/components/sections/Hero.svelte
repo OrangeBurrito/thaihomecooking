@@ -5,7 +5,7 @@
 
 <div id="hero" class="flex-column inverted">
   <div class="text">
-    <h1 class="headline-1">Learn how to cook Thai Cuisine in my home kitchen</h1>
+    <h1>Learn how to cook Thai Cuisine in my home kitchen</h1>
     <p class="large">Learn how to make authentic Thai dishes in my home kitchen in Bangkok with private cooking lessons in English or Thai.</p>
     <p class="large">You choose your dishes from my family cookbook containing 100+ recipes gathered over three generations.</p>
     <div class="buttons">

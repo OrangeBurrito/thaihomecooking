@@ -4,7 +4,7 @@
 
 </script>
 <div id="pricing" class="background">
-	<h2 class="headline-2">Pricing</h2>
+	<h2>Pricing</h2>
 	<div class="prices flex-center">
 		<Price people="1 person" price="฿4,000" per="per lesson"/>
 		<Price people="2-4 people" price="฿3,500" per="per person and lesson" highlighted/>

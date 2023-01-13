@@ -10,7 +10,7 @@
     <div class="dish">
 			<Image src={dish.photo} alt={dish.description} height="var(--img-height)"/>
       <div class="text">
-        <h4 class="headline-4 mb-0">{dish.name}</h4>
+        <h4 class="mb-0">{dish.name}</h4>
         <p class="small mb-0">{dish.description}</p>
       </div>
     </div>

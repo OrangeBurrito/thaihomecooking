@@ -1,12 +1,11 @@
 <script>
   import Tripadvisor from "$lib/components/Tripadvisor.svelte";
-
 	
   export let blogposts = {};
 </script>
 
 <div id="reviews" class="flex-center background">
-  <h2 class="headline-2">Reviews from Students</h2>
+  <h2>Reviews from Students</h2>
 	<Tripadvisor/>
   <div class="reviews-wrap flex-gap">
     <div class="main-reviews">
@@ -21,13 +20,13 @@
       {/each}
     </div>
     <div class="all-reviews">
-      <h2 class="headline-2">All Reviews</h2>
+      <h2>All Reviews</h2>
       <div class="links">
         {#each blogposts.all as post}
           <a class="card small-card" href={post.url}>
-            <h4 class="headline-4 title">{post.title}</h4>
+            <h4 class="title">{post.title}</h4>
             <div>
-              <h4 class="headline-4 blog-name mb-s">{post.blogName}</h4>
+              <h4 class="blog-name mb-s">{post.blogName}</h4>
               <a class="blog-link" href={post.url}>Read More ⇒</a>
             </div>
           </a>

@@ -1,166 +1,119 @@
 <script>
-  let showNav = false;
+  import Button from "$lib/components/Button.svelte";
+  import Link from "$lib/components/Link.svelte";
+
+  export let navLinks = [];
+
+  let open = false;
+  let activeLink = "";
 
   function toggleNav() {
-    showNav = !showNav;
+    open = !open;
+    document.body.classList.toggle("noscroll");
+		// document.documentElement.classList.toggle("noscroll");
   }
 
-	function toggleActive(e) {
-		if (e.target.tagName === 'A') {
-			document.querySelector('.active').classList.remove('active')
-			e.target.classList.add('active')
-			showNav = false
-		}
-	}
+  function toggleActive(e) {
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+    toggleNav();
+  }
 </script>
 
-<div id="navbar" class:show={showNav}>
-  <div class="bar">
-		<a href="/">
-			<h2 class="headline-2 mb-0">Thai Home Cooking</h2>
-		</a>
-    <button class="hamburger-menu" on:click={toggleNav} class:open={showNav}>
-			<div class="one"/>
-			<div class="two"/>
-			<div class="three"/>
-	</button>
-  </div>
-  <div class="overlay" class:show={showNav === true} on:click={e=>toggleActive(e)}>
-    <nav>
-      <a href="#hero" class="active">Home</a>
-      <a href="#info">Info</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Contact Me</a>
-    </nav>
-  </div>
+<div id="navbar">
+  <header class="flex">
+    <a href="#hero">
+      <h3 class="accent mb-0">Thai Home Cooking</h3>
+    </a>
 
-  <!-- <div class="socials">
-		<a href="/">Facebook</a>
-		<a href="/">Instagram</a>
-		<a href="/">TripAdvisor</a>
-	</div> -->
+    <div class="menu">
+      <Button menu on:click={toggleNav} {open}/>
+    </div>
+  </header>
+  <nav class="flex-gap" class:open>
+    <ul>
+      {#each navLinks as link}
+        <Link href={link.href} text={link.text} nav active={link.active} on:click={(e) => toggleActive(e)} />
+      {/each}
+    </ul>
+  </nav>
 </div>
 
 <style>
   #navbar {
     position: sticky;
     top: 0;
-		z-index: 4;
+    z-index: 4;
+    background: var(--dark-gray);
   }
-	
-	:global(#navbar.show + main) {
-		margin-top: -100vh;
-	}
-	
-  .bar {
-		display: flex;
-    justify-content: space-between;
+
+  header {
+    position: relative;
     align-items: center;
-		background: var(--dark-gray);
-  }
-
-  .bar h2 {
+    justify-content: space-between;
+    background: var(--dark-gray);
     padding: var(--space-16);
+    z-index: 3;
   }
 
-	.hamburger-menu {
-		background: none;
-		padding: 0 var(--space-16) 0 0;
-	}
-
-	.one, .two, .three {
-		width: var(--space-32);
-		height: var(--unit-sm);
-		background: var(--headline-text-color);
-		margin: 6px 0;
-		border-radius: 1.3px;
-		transition: 0.4s ease;
-	}
-
-	.open .one { transform: rotate(-45deg) translate(-8px, 6px); }
-	.open .two { opacity: 0;}
-	.open .three {transform: rotate(45deg) translate(-8px, -6px); }
-	
-  .overlay {
-		position: sticky;
-    opacity: 0;
-  }
-
-  .overlay.show {
-		display: flex;
-    justify-content: flex-end;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-		opacity: 1;
-		transition: all .2s;
+  header h3 {
+    background: linear-gradient(135deg, rgba(222,72,44,1) 0%, rgb(44, 169, 105) 64%, rgb(13, 117, 89) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+		padding-bottom: var(--unit-sm);
   }
 
   nav {
+    display: none;
+  }
+
+  nav ul {
     display: flex;
     flex-direction: column;
-		position: absolute;
-		left: 100vw;
-    width: 80vw;
-    height: 100%;
-    text-align: right;
-    gap: var(--space-16);
+    align-items: flex-end;
+    gap: var(--space-24);
     background: var(--dark-gray);
-    padding: var(--space-32);
-		transition: .2s ease-in;
-  }
-	
-	.overlay.show nav {
-		left: 20vw;
-	}
-
-  nav a {
-    text-decoration: none;
-    color: var(--black);
   }
 
-	nav a.active {
-		text-decoration: underline;
-		font-weight: bold;
-	}
+  @media screen and (max-width: 999px) {
+    nav.open {
+      position: absolute;
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
 
-	@media screen and (min-width: 1000px) {
-		#navbar {
-			height: 100vh;
-			padding: var(--space-32) var(--space-48) var(--space-32) var(--space-32);
-			background: var(--dark-gray);
-		}
+    nav.open ul {
+      position: fixed;
+      inset: 0 0 0 30%;
+      padding: var(--space-72) var(--space-32);
+    }
+  }
 
-		:global(#navbar.show + main) {
-			margin-top: 0;
-		}
+  @media screen and (min-width: 1000px) {
+    #navbar {
+      height: 100vh;
+      width: 20%;
+      padding-right: var(--space-32);
+    }
 
-		.overlay, .overlay.show {
-			position: fixed;
-			display: block;
-			width: fit-content;
-			background: none;
-		}
+    header {
+      padding: var(--space-32);
+    }
 
-		.hamburger-menu { display: none }
+    nav {
+      display: flex;
+    }
 
-		.overlay {
-			opacity: 1;
-		}
+    nav ul {
+      align-items: flex-start;
+      gap: var(--space-16);
+      padding: 0 var(--space-32);
+    }
 
-		nav {
-			left: 0 !important;
-			text-align: left;
-			gap: var(--space-20);
-			padding: 0;
-			width: auto;
-		}
-
-		.bar h2 {
-			padding: 0;
-			margin-bottom: var(--space-40) !important;
-		}
-	}
+    .menu {
+      display: none;
+    }
+  }
 </style>

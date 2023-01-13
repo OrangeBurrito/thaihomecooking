@@ -5,16 +5,16 @@
 <div id="contact" class="flex-column background">
   <div class="text">
     <div class="text">
-      <h2 class="headline-2 accent">Contact Me</h2>
+      <h2 class="accent">Contact Me</h2>
       <p>Contact me for more information, or to make an appointment.</p>
     </div>
     <div class="contact-info">
 			<a href="https://goo.gl/maps/ZyBoLTqpojBYCkf88">
 				<div class="address slide-in">
-					<h2 class="headline-2 slide-in-link mb-0">Thai Home Cooking</h2>
-					<h2 class="headline-2 slide-in-link mb-0">364 Sukhumvit Soi 79, Bangkok,</h2>
+					<h2 class="slide-in-link mb-0">Thai Home Cooking</h2>
+					<h2 class="slide-in-link mb-0">364 Sukhumvit Soi 79, Bangkok,</h2>
 					<br>
-					<h2 class="headline-2 slide-in-link">TH 10260</h2>
+					<h2 class="slide-in-link">TH 10260</h2>
 				</div>
 			</a>
       <hr />

@@ -7,11 +7,11 @@
 <div id="menu" class="flex-gap">
   <h1 class="headline-1 accent">Our Menu</h1>
   <div class="dishes">
-		<h2 class="headline-2">Dishes</h2>
+		<h2>Dishes</h2>
     <Dishes data={menu.dishes}/>
   </div>
   <div class="desserts">
-		<h2 class="headline-2">Desserts</h2>
+		<h2>Desserts</h2>
 		<Dishes data={menu.desserts}/>
 	</div>
 </div>

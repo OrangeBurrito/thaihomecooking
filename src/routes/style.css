@@ -147,15 +147,23 @@
 	--body-font: 'Maison Neue', Helvetica, sans-serif;
 }
 
-html, body { overflow-x: clip; }
+/* html, body { overflow-x: clip;} */
 
-html { scroll-behavior: smooth; }
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: var(--body-font);
 	background: var(--almost-white);
 }
 
+@media screen and (max-width: 999px) {
+	body.noscroll {
+		overflow: hidden;
+	}
+}
+	
 p {
 	color: var(--body-text-color);
 	font-size: var(--body);
@@ -197,25 +205,25 @@ h1, h2, h3, h4 {
 	font-family: var(--headline-font);
 }
 
-.headline-1 {
+h1 {
 	font-size: var(--headline-1);
 	line-height: var(--headline-1);
 	margin-bottom: calc(var(--headline-1) / 2);
 }
 
-.headline-2 {
+h2 {
 	font-size: var(--headline-2);
 	line-height: var(--headline-2);
 	margin-bottom: calc(var(--headline-2) / 2);
 }
 
-.headline-3 {
+h3 {
 	font-size: var(--headline-3);
 	line-height: var(--headline-3);
 	margin-bottom: calc(var(--headline-3) / 2);
 }
 
-.headline-4 {
+h4 {
 	font-size: var(--headline-4);
 	line-height: var(--headline-4);
 	margin-bottom: calc(var(--headline-4) / 2);
@@ -243,6 +251,10 @@ h1, h2, h3, h4 {
 }
 
 .background { background: var(--gray);}
+
+.flex {
+	display: flex;
+}
 
 .flex-center {
 	display: flex;
