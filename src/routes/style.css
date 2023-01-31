@@ -108,6 +108,8 @@
 	--gray-black: #3d2421;
 	--black: #1e0a0a;
 	--primary: #396b53;
+	--primary-light: #239e63;
+	--primary-dark: #103b3b;
 	--primary-gradient: 57, 107, 83;
 
 	--link-color: var(--primary);

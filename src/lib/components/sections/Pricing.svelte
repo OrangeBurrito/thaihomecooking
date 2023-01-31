@@ -20,9 +20,16 @@
 	 }
 
 	#pricing .prices {
-		flex-direction: row;
-		align-items: flex-start;
+		
+		align-items: stretch;
+		gap: var(--space-24);
 		margin: var(--space-48) 0;
+	}
+
+	@media screen and (min-width: 600px) {
+		#pricing .prices {
+			flex-direction: row;
+		}
 	}
 
 </style>

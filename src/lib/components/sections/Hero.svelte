@@ -9,55 +9,61 @@
     <p class="large">Learn how to make authentic Thai dishes in my home kitchen in Bangkok with private cooking lessons in English or Thai.</p>
     <p class="large">You choose your dishes from my family cookbook containing 100+ recipes gathered over three generations.</p>
     <div class="buttons">
-			<Button primary text="Sign up for a Class" large/>
-			<Button ghost href="#info" text="Let me see it first ⇒" large/>
+      <Button primary text="Sign up for a Class" large />
+      <Button ghost href="#info" text="Let me see it first ⇒" large />
     </div>
   </div>
   <div class="banner-image">
     <div class="overlay" />
-		<Image src="/images/banner_image.png"/>
+    <Image srcSmall="/images/banner_image_small.png" src="/images/banner_image.png" />
   </div>
 </div>
 
 <style>
-	#hero {
+  #hero {
     position: relative;
     background: var(--primary);
-		background-size: contain;
-		padding: 0;
+    background-size: contain;
+    padding: 0;
   }
 
-	.banner-image {
-		position: relative;
-		opacity: 0.6;
-	}
+  .banner-image {
+    position: relative;
+    opacity: 0.6;
+  }
 
-	#hero .text {
-		padding: var(--space-32) var(--space-32) 0 var(--space-32);
-	}
+  #hero .text {
+    padding: var(--space-32) var(--space-32) 0 var(--space-32);
+  }
 
-	#hero .overlay {
-		position: absolute;
-		width: 100%;
-		height: var(--space-128);
-		margin-top: -28px;
-		background: linear-gradient(180deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);
-		z-index: 2;
-	}
+  #hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: var(--space-72);
+    margin-top: -28px;
+    background: linear-gradient(
+      180deg,
+      rgba(var(--primary-gradient), 1) 0%,
+      rgba(var(--primary-gradient), 1) 25%,
+      rgba(var(--primary-gradient), 0.7) 50%,
+      rgba(var(--primary-gradient), 0) 100%
+    );
+    z-index: 2;
+  }
 
-	@media screen and (min-width: 800px) {
-		#hero {
-			padding: 56px 128px 72px 100px;
-		}
+  @media screen and (min-width: 800px) {
+    #hero {
+      padding: 56px 128px 72px 100px;
+    }
 
     #hero .text {
       width: 65%;
       z-index: 3;
-			padding: 0;
+      padding: 0;
     }
 
     .banner-image {
-			position: absolute;
+      position: absolute;
       right: 0;
       width: 70%;
       height: calc(100% + var(--space-16));
@@ -67,13 +73,14 @@
       position: absolute;
       width: 70%;
       height: 100%;
-			margin-top: 0;
-      background: linear-gradient(-270deg, rgba(var(--primary-gradient), 1) 0%,rgba(var(--primary-gradient), 1) 25%,rgba(var(--primary-gradient), 0.7) 50%,rgba(var(--primary-gradient), 0) 100%);
+      margin-top: 0;
+      background: linear-gradient(
+        -270deg,
+        rgba(var(--primary-gradient), 1) 0%,
+        rgba(var(--primary-gradient), 1) 25%,
+        rgba(var(--primary-gradient), 0.7) 50%,
+        rgba(var(--primary-gradient), 0) 100%
+      );
     }
-
-    .banner-image img {
-      width: 100%;
-			height: 100%;
-    }
-	}
+  }
 </style>
