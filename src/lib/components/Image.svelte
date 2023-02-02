@@ -4,17 +4,16 @@
 	export let alt = ''
 	export let width = '100%'
 	export let height = '100%'
+	export let eager = false
 </script>
 
 <div class="image" style="width: {width}; height: {height}">
-	{#if srcSmall}
 	<picture>
-		<source media='(min-width: 800px)' srcset={src}>
-		<img src={srcSmall} {alt} loading="lazy"/>
-	  </picture>	  
-	{:else}
-	<img {src} {alt} loading="lazy"/>
-	{/if}
+		{#if srcSmall}
+		<source media='(max-width: 800px)' srcset={srcSmall}>
+		{/if}
+		<img src={src} {alt} loading={eager ? "eager" : "lazy"}/>
+	</picture>
 </div>
 
 <style>

@@ -1,307 +1,319 @@
 @font-face {
-	font-family: 'Literata';
-	src: url('/fonts/literata/Literata-VariableFont_opsz,wght.woff2') format('woff2-variations');
-	font-weight: 1 999;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Literata";
+  src: url("/fonts/literata/Literata-VariableFont_opsz,wght.woff2") format("woff2-variations");
+  font-weight: 1 999;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Literata';
-	src: url('/fonts/literata/Literata-Italic-VariableFont_opsz,wght.woff2') format('woff2-variations');
-	font-weight: 1 999;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Literata";
+  src: url("/fonts/literata/Literata-Italic-VariableFont_opsz,wght.woff2") format("woff2-variations");
+  font-weight: 1 999;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-Light.woff2') format('woff2');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-LightItalic.woff2') format('woff2');
-	font-weight: 300;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-Book.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-BookItalic.woff2') format('woff2');
-	font-weight: normal;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-BookItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-Medium.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-MediumItalic.woff2') format('woff2');
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-Demi.woff2') format('woff2');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-Demi.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-DemiItalic.woff2') format('woff2');
-	font-weight: 600;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-DemiItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-BoldItalic.woff2') format('woff2');
-	font-weight: bold;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Maison Neue';
-	src: url('/fonts/maison_neue/MaisonNeue-Bold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Maison Neue";
+  src: url("/fonts/maison_neue/MaisonNeue-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
-	padding: 0;
+  padding: 0;
   margin: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 :root {
-	--white: #fffdfa;
-	--almost-white: #fbf1e6;
-	--gray: #f1e5d9;
-	--dark-gray: #dbc9bd;
-	--gray-black: #3d2421;
-	--black: #1e0a0a;
-	--primary: #396b53;
-	--primary-light: #239e63;
-	--primary-dark: #103b3b;
-	--primary-gradient: 57, 107, 83;
+  --white: #fffdfa;
+  --almost-white: #fbf1e6;
+  --gray: #f1e5d9;
+  --dark-gray: #dbc9bd;
+  --gray-black: #3d2421;
+  --black: #1e0a0a;
+  --primary: #396b53;
+  --primary-light: #239e63;
+  --primary-dark: #103b3b;
+  --primary-gradient: 57, 107, 83;
 
-	--link-color: var(--primary);
+  --link-color: var(--primary);
 
-	--headline-text-color: var(--black);
-	--body-text-color: var(--gray-black);
-	--border-color: var(--black);
+  --headline-text-color: var(--black);
+  --body-text-color: var(--gray-black);
+  --border-color: var(--black);
 
-	--unit-sm: 4px;
-	--unit: 8px;
+  --unit-sm: 4px;
+  --unit: 8px;
 
-	--space-8: var(--unit);
-	--space-16: calc(var(--unit) * 2);
-	--space-20: calc(var(--unit) * 2 + var(--unit-sm));
-	--space-24: calc(var(--unit) * 3);
-	--space-32: calc(var(--unit) * 4);
-	--space-40: calc(var(--unit) * 5);
-	--space-48: calc(var(--unit) * 6);
-	--space-64: calc(var(--unit) * 8);
-	--space-72: calc(var(--unit) * 9);
-	--space-96: calc(var(--unit) * 12);
-	--space-128: calc(var(--unit) * 16);
+  --space-8: var(--unit);
+  --space-16: calc(var(--unit) * 2);
+  --space-20: calc(var(--unit) * 2 + var(--unit-sm));
+  --space-24: calc(var(--unit) * 3);
+  --space-32: calc(var(--unit) * 4);
+  --space-40: calc(var(--unit) * 5);
+  --space-48: calc(var(--unit) * 6);
+  --space-64: calc(var(--unit) * 8);
+  --space-72: calc(var(--unit) * 9);
+  --space-96: calc(var(--unit) * 12);
+  --space-128: calc(var(--unit) * 16);
 
-	--headline-1: calc( var(--unit) * 4); /* 32 */
-	--headline-2: calc(var(--unit) * 3 + var(--unit-sm)); /* 28 */
-	--headline-3: calc(var(--unit) * 3); /* 24 */
-	--headline-4: calc(var(--unit) * 3 - var(--unit-sm)); /* 20 */
+  --headline-1: calc(var(--unit) * 4); /* 32 */
+  --headline-2: calc(var(--unit) * 3 + var(--unit-sm)); /* 28 */
+  --headline-3: calc(var(--unit) * 3); /* 24 */
+  --headline-4: calc(var(--unit) * 3 - var(--unit-sm)); /* 20 */
 
-	--body: 18px;
-	--body-small: 16px;
-	--body-large: calc(var(--unit) * 2 + var(--unit-sm)); /* 20px */
+  --body: 18px;
+  --body-small: 16px;
+  --body-large: calc(var(--unit) * 2 + var(--unit-sm)); /* 20px */
 
-	--button-large: var(--body-large);
-	--button: 18px;
+  --button-large: var(--body-large);
+  --button: 18px;
 
-	--headline-font: 'Literata';
-	--body-font: 'Maison Neue', Helvetica, sans-serif;
+  --headline-font: "Literata";
+  --body-font: "Maison Neue", Helvetica, sans-serif;
 }
 
 /* html, body { overflow-x: clip;} */
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family: var(--body-font);
-	background: var(--almost-white);
+  font-family: var(--body-font);
+  background: var(--almost-white);
 }
 
 @media screen and (max-width: 999px) {
-	body.noscroll {
-		overflow: hidden;
-	}
+  body.noscroll {
+    overflow: hidden;
+  }
 }
-	
+
 p {
-	color: var(--body-text-color);
-	font-size: var(--body);
-	font-weight: 400;
-	line-height: calc(var(--body) + var(--unit));
-	margin-bottom: var(--space-16);
+  color: var(--body-text-color);
+  font-size: var(--body);
+  font-weight: 400;
+  line-height: calc(var(--body) + var(--unit));
+  margin-bottom: var(--space-16);
 }
 
-p.small, a.small {
-	font-size: var(--body-small);
-	line-height: calc(var(--body-small) + var(--unit-sm));
+p.small,
+a.small {
+  font-size: var(--body-small);
+  line-height: calc(var(--body-small) + var(--unit-sm));
 }
 
-p.large, a.large {
-	font-size: var(--body-large) 
+p.large,
+a.large {
+  font-size: var(--body-large);
 }
 
 p.caption {
-	text-transform: uppercase;
-	font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 span {
-	font-size: inherit;
-	line-height: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 a {
-	font-size: var(--body);
-	text-decoration: none;
+  font-size: var(--body);
+  text-decoration: none;
 }
 
 img {
-	object-fit: cover;
+  object-fit: cover;
 }
 
-h1, h2, h3, h4 {
-	color: var(--headline-text-color);
-	font-family: var(--headline-font);
+h1,
+h2,
+h3,
+h4 {
+  color: var(--headline-text-color);
+  font-family: var(--headline-font);
 }
 
 h1 {
-	font-size: var(--headline-1);
-	line-height: var(--headline-1);
-	margin-bottom: calc(var(--headline-1) / 2);
+  font-size: var(--headline-1);
+  line-height: var(--headline-1);
+  margin-bottom: calc(var(--headline-1) / 2);
 }
 
 h2 {
-	font-size: var(--headline-2);
-	line-height: var(--headline-2);
-	margin-bottom: calc(var(--headline-2) / 2);
+  font-size: var(--headline-2);
+  line-height: var(--headline-2);
+  margin-bottom: calc(var(--headline-2) / 2);
 }
 
 h3 {
-	font-size: var(--headline-3);
-	line-height: var(--headline-3);
-	margin-bottom: calc(var(--headline-3) / 2);
+  font-size: var(--headline-3);
+  line-height: var(--headline-3);
+  margin-bottom: calc(var(--headline-3) / 2);
 }
 
 h4 {
-	font-size: var(--headline-4);
-	line-height: var(--headline-4);
-	margin-bottom: calc(var(--headline-4) / 2);
-	font-weight: 600;
+  font-size: var(--headline-4);
+  line-height: var(--headline-4);
+  margin-bottom: calc(var(--headline-4) / 2);
+  font-weight: 600;
 }
 
 .buttons {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-16);
-	align-items: center;
-	margin-top: var(--space-40);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  align-items: center;
+  margin-top: var(--space-40);
 }
 
 .text {
-	display: flex;
-	flex-direction: column;
-	gap: var(--unit);
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit);
 }
 
 .inverted {
-	--body-text-color: var(--almost-white);
-	--headline-text-color: var(--white);
-	--border-color: var(--white);
+  --body-text-color: var(--almost-white);
+  --headline-text-color: var(--white);
+  --border-color: var(--white);
 }
 
-.background { background: var(--gray);}
+.background {
+  background: var(--gray);
+}
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .flex-center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .flex-column {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
 }
 
 .flex-gap {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
 }
 
-.mb-0 {margin-bottom: 0 !important;}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 
-.mb-s { margin-bottom: var(--unit-sm) !important}
+.mb-s {
+  margin-bottom: var(--unit-sm) !important;
+}
 
 main > div {
-	padding: 24px 32px 32px 32px;
+  padding: 24px 32px 32px 32px;
 }
 
 svg {
-	max-width: 200px;
-	height: 100%;
+  max-width: 200px;
+  height: 100%;
 }
 
 .accent {
-	color: var(--primary);
+  color: var(--primary);
 }
 
 .slide-in-link {
-	display: inline-block;
+  display: inline-block;
   position: relative;
 }
 
 .slide-in-link::after {
-	content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -316,27 +328,27 @@ svg {
 .slide-in:hover .slide-in-link::after,
 .slide-in:focus .slide-in-link::after,
 .slide-in:active .slide-in-link::after {
-	transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 @media screen and (min-width: 800px) {
-	:root {
-		--headline-1: calc( var(--unit) * 5); /* 40 */
-	}
+  :root {
+    --headline-1: calc(var(--unit) * 5); /* 40 */
+  }
 
-	main > div {
-		padding: 56px 128px 72px 100px;
-	}
+  main > div {
+    padding: 56px 128px 72px 100px;
+  }
 
-	.flex-column {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		gap: var(--space-64);
-	}
+  .flex-column {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-64);
+  }
 
-	.buttons {
-		flex-direction: row;
-		gap: var(--space-32);
-	}
+  .buttons {
+    flex-direction: row;
+    gap: var(--space-32);
+  }
 }

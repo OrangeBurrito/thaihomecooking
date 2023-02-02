@@ -9,13 +9,13 @@
     <p class="large">Learn how to make authentic Thai dishes in my home kitchen in Bangkok with private cooking lessons in English or Thai.</p>
     <p class="large">You choose your dishes from my family cookbook containing 100+ recipes gathered over three generations.</p>
     <div class="buttons">
-      <Button primary text="Sign up for a Class" large />
+      <Button primary href="#contact" text="Sign up for a Class" large />
       <Button ghost href="#info" text="Let me see it first ⇒" large />
     </div>
   </div>
   <div class="banner-image">
     <div class="overlay" />
-    <Image srcSmall="/images/banner_image_small.png" src="/images/banner_image.png" />
+    <Image srcSmall="/images/banner_image_small.png" src="/images/banner_image.png" eager/>
   </div>
 </div>
 

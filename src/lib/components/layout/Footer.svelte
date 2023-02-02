@@ -1,5 +1,5 @@
 <footer>
-	<p class="mb-0">@ Angsana Andersson 2023</p>
+	<p class="mb-0">@ Angsana Andersson {new Date().getFullYear()}</p>
 	<p class="mb-0">Designed and built by <a href="https://orangeburrito.com">OrangeBurrito</a></p>
 </footer>
 
