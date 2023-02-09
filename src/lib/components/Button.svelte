@@ -5,13 +5,14 @@
   export let large = false;
   export let primary = false;
   export let ghost = false;
+  export let dark = false;
   export let menu = false;
   export let open = false;
 </script>
 
 {#if href}
   <a {href} {alt}>
-    <button on:click class:large class:primary class:ghost>{text}</button>
+    <button on:click class:dark class:large class:primary class:ghost>{text}</button>
   </a>
 {:else if menu}
   <button on:click|preventDefault class:menu class:open class="flex-gap">
@@ -20,7 +21,7 @@
     <div />
   </button>
 {:else}
-  <button on:click class:large class:primary class:ghost>{text}</button>
+  <button class:dark on:click class:large class:primary class:ghost>{text}</button>
 {/if}
 
 <style>
@@ -35,6 +36,11 @@
   button.large {
     font-size: var(--button-large);
     font-weight: 600;
+  }
+
+  button.dark {
+	background-color: var(--primary);
+	color: var(--white);
   }
 
   button.primary {

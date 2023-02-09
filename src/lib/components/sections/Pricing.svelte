@@ -10,7 +10,7 @@
 		<Price people="2-4 people" price="฿3,500" per="per person and lesson" highlighted/>
 		<Price people="5-6 people" price="฿3,000" per="per person and lesson"/>
 	</div>
-	<Button ghost href="#contact" text="Contact me for more information below ↓"/>
+	<Button primary dark large href="#contact" text="Book a Class Now"/>
 </div>
 
 <style>

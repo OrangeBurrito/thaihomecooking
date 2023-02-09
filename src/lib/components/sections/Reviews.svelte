@@ -39,6 +39,8 @@
 <style>
 	#reviews {
 		gap: var(--space-32);
+		background-image: url('/images/repeating_pattern.png');
+		background-size: 72px;
   }
 
   .reviews-wrap {
